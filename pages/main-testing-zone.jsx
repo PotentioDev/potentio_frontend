@@ -6,8 +6,8 @@ export default function testing() {
   return (
     <main>
     <Header/>
-    <div id="container" className="flex mt-9 mx-12 w-11/12 h-full">
-      <section id="left-section" className="flex flex-col w-8/12  text-2xl">
+    <div id="container" className="flex mt-9 justify-center w-full h-full pb-6">
+      <section id="left-section" className="flex flex-col w-7/12  text-2xl">
         <div id="question-container" className="flex-col pl-8 mb-5 rounded-3xl shadow-inner shadow-gray-400 h-11/12 font-comfortaa"> 
           
           <header id="question-number" className="border-b-2 border-black w-96 pb-2 mb-6">
@@ -41,18 +41,18 @@ export default function testing() {
 
         </div>
         <div id="options" className="flex p-8 pl-0 pb-1 pr-3 rounded-3xl shadow-inner shadow-gray-400 select-none">
-          <div id="left-half" className="flex flex-wrap w-5/12 ml-4 h-36 justify-between">
+          <div id="left-half" className="flex flex-wrap w-5/12 ml-4 mt-3 h-36 justify-between">
             
-            <button id="Save_and_next" className="bg-green-600 pt-1.5 pb-1.5 h-10 w-28 pl-1.5 pr-1.5 text-center text-base tracking-wide rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out " type="button" >
+            <button id="Save_and_next" className="bg-green-600 pt-1.5 pb-2 h-10 w-28 pl-1.5 pr-1.5 text-center text-base tracking-wide rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out " type="button" >
             <p className="font-sans font-bold text-white inline-block">Save & Next</p>
             </button>  
-            <button id="Clear" className=" pt-1 pb-1.5 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+            <button id="Clear" className=" pt-1 pb-2 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
               <p className=" font-sans font-semibold text-gray-600 inline-block">Clear</p>
             </button>
-            <button id="Back" className="pt-1 pb-1.5 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+            <button id="Back" className="pt-1 pb-2 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
               <p className=" font-sans font-semibold text-gray-600 inline-block">&#8810;Back</p>
             </button> 
-            <button id="Next" className="mb-6 pt-1 pb-1.5 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+            <button id="Next" className="mb-6 pt-1 pb-2 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
               <p className=" font-sans font-semibold text-gray-600 inline-block">Next&#8811;</p>
             </button>   
             
@@ -60,15 +60,15 @@ export default function testing() {
             
           </div>
 
-          <div id="right-half" className="flex flex-wrap w-10/12 pl-3 pr- justify-around align-middle">
+          <div id="right-half" className="flex flex-wrap mt-3 w-10/12 pl-3 justify-around">
 
-            <button id="save_and_mark_for_review" className=" bg-amber-500 mb-6 pt-1.5 pb-1.5 h-10 w-52 text-center tracking-wide text-white text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-amber-600 transition duration-150 ease-in-out " type="button" >
+            <button id="save_and_mark_for_review" className=" bg-amber-500 pt-1.5 pb-1.5 h-10 w-52 text-center tracking-wide text-white text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-amber-600 transition duration-150 ease-in-out " type="button" >
               <p className="font-sans font-bold text-white inline-block">Save & mark for Review</p>
             </button>  
-            <button id="Save_and_next" className="mb-6 pt-1 pb-1.5 h-10 w-52 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+            <button id="Save_and_next" className="mb-5 pt-1 pb-1.5 h-10 w-52 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
               <p className=" font-sans font-semibold text-gray-600 inline-block">Mark for Review & Next</p>
             </button>
-            <button id="Save_and_next" className="bg-green-600 ml-72 mb-6 pt-1 pb-1.5 pl-2.5 pr-2.5 w-32 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out" type="button" >
+            <button id="Save_and_next" className="bg-green-600 ml-72 h-10 mb-11 pt-2 pb-5 pl-2.5 pr-2.5 w-32 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out" type="button" >
               <p className=" font-sans font-bold text-white inline-block">Submit</p>
             </button> 
 
@@ -76,9 +76,9 @@ export default function testing() {
         </div>
         
       </section>
-      <section id="right-section" className="flex flex-wrap justify-center shadow-inner p-4 shadow-gray-400 w-5/12 ml-7 rounded-3xl">
+      <section id="right-section" className="flex flex-wrap justify-center shadow-inner p-4 shadow-gray-400 w-4/12 ml-5 pt-8 rounded-3xl">
         
-        <div id="clock" className="flex justify-around align-bottom font-sans h-8 w-52">
+        <div id="clock" className="flex justify-around font-sans h-8 w-52">
           <span id="icon" className="flex pr-1 mt-1">
             <svg  className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-7.59V4h2v5.59l3.95 3.95-1.41 1.41L9 10.41z"/>
@@ -92,7 +92,7 @@ export default function testing() {
           <span id="secs" className="pt-2">sec</span>
         </div>
           
-        <div id="legend" className="flex w-11/12 pt-3 text-xs flex-wrap align-middle h-52 border-2 border-dashed border-black ">
+        <div id="legend" className="flex w-11/12 pt-3 mt-3 mb-4 text-xs flex-wrap align-middle h-52 border-2 border-dashed border-black">
           
           <div id="done" className="flex h-20 ml-4">
             <div id="done-icon" className="flex h-16 w-20">
@@ -140,17 +140,115 @@ export default function testing() {
             </p>
           </div>
 
-          
+        </div>
 
-          
+        <div id="subject" className="flex justify-center w-11/12 h-8 mb-4 text-nunito text-gray-700 text-base font-semibold tracking-wide">
+
+          <button id="physics" className="flex justify-center mr-1.5 w-24 text-center rounded-xl shadow-xl shadow-gray-200 hover:shadow-xl hover:shadow-gray-300 focus:shadow-lg focus:outline-none  focus:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+            <p className="inline-block mt-0.5">Physics</p>
+          </button>
+
+          <button id="chemistry" className="flex justify-center mr-1.5 w-24 rounded-xl shadow-xl shadow-gray-200 hover:shadow-xl hover:shadow-gray-300 focus:shadow-lg focus:outline-none  focus:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+            <p className="inline-block mt-0.5">Chemistry</p>
+          </button>
+
+          <button id="maths" className="flex justify-center mr-1.5 w-24 rounded-xl shadow-xl shadow-gray-200 hover:shadow-xl hover:shadow-gray-300 focus:shadow-lg focus:outline-none  focus:bg-green-300 active:bg-green-300 transition duration-150 ease-in-out">
+            <p className="inline-block mt-0.5">Maths</p>
+          </button>
 
         </div>
 
-        <div id="subject">
+        <div id="question-number" className="font-nunito justify-around flex-wrap flex text-base font-semibold text-center w-96 p-7 pt-0 pb-3">
+          
+          <div id="row-1" className="flex justify-between w-96 ">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">1</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">2</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">3</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">4</p>
+            </button>
+            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">5</p>
+            </button>
+          </div>
 
-        </div>
+          <div id="row-2" className="flex justify-between w-96 pt-3">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">6</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">7</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">8</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">9</p>
+            </button>
+            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">10</p>
+            </button>
+          </div>
 
-        <div id="question-number">
+          <div id="row-3" className="flex justify-between w-96 pt-3">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">11</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">12</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">13</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">14</p>
+            </button>
+            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">15</p>
+            </button>
+          </div>
+
+          <div id="row-4" className="flex justify-between w-96 pt-3">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">16</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">17</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">18</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">19</p>
+            </button>
+            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">20</p>
+            </button>
+          </div>
+
+          <div id="row-5" className="flex justify-between w-96 pt-3">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">21</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">22</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">23</p>
+            </button>
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">24</p>
+            </button>
+            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+              <p className="inline-block mt-0.5">25</p>
+            </button>
+          </div>
 
         </div>
 
