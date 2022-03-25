@@ -161,91 +161,91 @@ export default function testing() {
         <div id="question-number" className="font-nunito justify-around flex-wrap flex text-base font-semibold text-center w-96 p-7 pt-0 pb-3">
           
           <div id="row-1" className="flex justify-between w-96 ">
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">1</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">2</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">3</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">4</p>
             </button>
-            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">5</p>
             </button>
           </div>
 
           <div id="row-2" className="flex justify-between w-96 pt-3">
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">6</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">7</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">8</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">9</p>
             </button>
-            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">10</p>
             </button>
           </div>
 
           <div id="row-3" className="flex justify-between w-96 pt-3">
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">11</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">12</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">13</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">14</p>
             </button>
-            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">15</p>
             </button>
           </div>
 
           <div id="row-4" className="flex justify-between w-96 pt-3">
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">16</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">17</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">18</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">19</p>
             </button>
-            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">20</p>
             </button>
           </div>
 
           <div id="row-5" className="flex justify-between w-96 pt-3">
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">21</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">22</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">23</p>
             </button>
-            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">24</p>
             </button>
-            <button className="h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg">
+            <button className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
               <p className="inline-block mt-0.5">25</p>
             </button>
           </div>
