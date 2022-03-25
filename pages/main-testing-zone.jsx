@@ -6,9 +6,9 @@ export default function testing() {
   return (
     <main>
     <Header/>
-    <div id="container" className="flex mt-9 mx-12 w-9/10 h-full">
-      <section id="left-section" className="flex shadow-inner rounded-2xl  w-2/3 pl-9 font-comfortaa text-2xl">
-        <div id="question-container" className="flex-col h-2/3"> 
+    <div id="container" className="flex mt-9 mx-12 w-11/12 h-full">
+      <section id="left-section" className="flex flex-col w-8/12  text-2xl">
+        <div id="question-container" className="flex-col pl-8 mb-5 rounded-3xl shadow-inner shadow-gray-400 h-11/12 font-comfortaa"> 
           
           <header id="question-number" className="border-b-2 border-black w-96 pb-2 mb-6">
             <p className="pt-8">Question 1</p>
@@ -19,7 +19,7 @@ export default function testing() {
           </div>
 
           
-          <div className=" mt-1 flex flex-wrap w-8/12 justify-between ">
+          <div className=" mt-1 flex flex-wrap w-8/12 justify-between pb-4">
             <div className="text-gray-700 w-44 p-4">
               <input type="radio" value="" name="user-answer"/>
               <span className=" ml-0.5">1</span>
@@ -40,12 +40,119 @@ export default function testing() {
 
 
         </div>
-        <div id="options" className="flex">
+        <div id="options" className="flex p-8 pl-0 pb-1 pr-3 rounded-3xl shadow-inner shadow-gray-400 select-none">
+          <div id="left-half" className="flex flex-wrap w-5/12 ml-4 h-36 justify-between">
+            
+            <button id="Save_and_next" className="bg-green-600 pt-1.5 pb-1.5 h-10 w-28 pl-1.5 pr-1.5 text-center text-base tracking-wide rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out " type="button" >
+            <p className="font-sans font-bold text-white inline-block">Save & Next</p>
+            </button>  
+            <button id="Clear" className=" pt-1 pb-1.5 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+              <p className=" font-sans font-semibold text-gray-600 inline-block">Clear</p>
+            </button>
+            <button id="Back" className="pt-1 pb-1.5 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+              <p className=" font-sans font-semibold text-gray-600 inline-block">&#8810;Back</p>
+            </button> 
+            <button id="Next" className="mb-6 pt-1 pb-1.5 pl-2.5 pr-2.5 h-10 w-28 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+              <p className=" font-sans font-semibold text-gray-600 inline-block">Next&#8811;</p>
+            </button>   
+            
+            
+            
+          </div>
 
+          <div id="right-half" className="flex flex-wrap w-10/12 pl-3 pr- justify-around align-middle">
+
+            <button id="save_and_mark_for_review" className=" bg-amber-500 mb-6 pt-1.5 pb-1.5 h-10 w-52 text-center tracking-wide text-white text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-amber-600 transition duration-150 ease-in-out " type="button" >
+              <p className="font-sans font-bold text-white inline-block">Save & mark for Review</p>
+            </button>  
+            <button id="Save_and_next" className="mb-6 pt-1 pb-1.5 h-10 w-52 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out" type="button" >
+              <p className=" font-sans font-semibold text-gray-600 inline-block">Mark for Review & Next</p>
+            </button>
+            <button id="Save_and_next" className="bg-green-600 ml-72 mb-6 pt-1 pb-1.5 pl-2.5 pr-2.5 w-32 text-center tracking-wide text-base rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out" type="button" >
+              <p className=" font-sans font-bold text-white inline-block">Submit</p>
+            </button> 
+
+          </div>
         </div>
         
       </section>
-      <section id="right-section" className="flex">
+      <section id="right-section" className="flex flex-wrap justify-center shadow-inner p-4 shadow-gray-400 w-5/12 ml-7 rounded-3xl">
+        
+        <div id="clock" className="flex justify-around align-bottom font-sans h-8 w-52">
+          <span id="icon" className="flex pr-1 mt-1">
+            <svg  className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-7.59V4h2v5.59l3.95 3.95-1.41 1.41L9 10.41z"/>
+            </svg>
+          </span>
+          <span id="hours" className=" text-2xl font-medium">01</span>
+          <span id="hr" className="pt-2">hr</span>
+          <span id="minutes" className="text-2xl font-medium">20</span>
+          <span id="mins" className="pt-2">min</span>
+          <span id="seconds" className="text-2xl font-medium">22</span>
+          <span id="secs" className="pt-2">sec</span>
+        </div>
+          
+        <div id="legend" className="flex w-11/12 pt-3 text-xs flex-wrap align-middle h-52 border-2 border-dashed border-black ">
+          
+          <div id="done" className="flex h-20 ml-4">
+            <div id="done-icon" className="flex h-16 w-20">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)">
+                <path d="M11.973 17.49c-.12-3.65 3.022-6.56 6.652-6.161l46.952 5.157a6 6 0 0 1 5.344 5.964v25.657a6 6 0 0 1-4.878 5.894L20.388 62.69c-3.618.689-6.997-2.016-7.118-5.697L11.973 17.49Z" fill="#34D26A"/></g><path d="M39.683 41c-.48 0-.72-.235-.72-.704 0-.459.24-.688.72-.688h1.952v-7.984l-1.504.96c-.203.128-.395.165-.576.112a.771.771 0 0 1-.4-.336.773.773 0 0 1-.08-.512c.043-.192.165-.352.368-.48l2.208-1.392c.181-.107.352-.192.512-.256.17-.075.33-.112.48-.112a.64.64 0 0 1 .448.16c.128.107.192.272.192.496v9.344h1.792c.49 0 .736.23.736.688 0 .47-.245.704-.736.704h-5.392Z" fill="#fff"/><defs><filter id="a" x=".971" y=".292" width="88.951" height="81.504" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="4" dy="4"/><feGaussianBlur stdDeviation="7.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0.35 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_977_141"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="2" dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0.25 0"/><feBlend in2="effect1_dropShadow_977_141" result="effect2_dropShadow_977_141"/><feBlend in="SourceGraphic" in2="effect2_dropShadow_977_141" result="shape"/></filter></defs>
+              </svg>
+            </div>
+            <p className=" font-nunito font-semibold pt-7 -ml-1">
+              Done
+            </p>
+          </div>
+          
+          
+          
+          <div id="review" className="flex h-20 ml-10">
+            <div id="review-icon"  className="flex h-20 w-16 ">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)"><rect x="11" y="11" width="52" height="52" rx="26" fill="#7E54BB"/></g>
+                <path d="M34.683 41c-.48 0-.72-.235-.72-.704 0-.459.24-.688.72-.688h1.952v-7.984l-1.504.96c-.203.128-.395.165-.576.112a.771.771 0 0 1-.4-.336.773.773 0 0 1-.08-.512c.043-.192.165-.352.368-.48l2.208-1.392c.181-.107.352-.192.512-.256.17-.075.33-.112.48-.112a.64.64 0 0 1 .448.16c.128.107.192.272.192.496v9.344h1.792c.49 0 .736.23.736.688 0 .47-.245.704-.736.704h-5.392Z" fill="#fff"/><defs><filter id="a" x="0" y="0" width="82" height="82" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="4" dy="4"/><feGaussianBlur stdDeviation="7.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0.35 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_977_147"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="2" dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0.25 0"/><feBlend in2="effect1_dropShadow_977_147" result="effect2_dropShadow_977_147"/><feBlend in="SourceGraphic" in2="effect2_dropShadow_977_147" result="shape"/></filter></defs>
+              </svg>
+            </div>
+            <p className="flex flex-wrap pl-2 w-24  font-nunito font-semibold pt-5 -ml-1">
+              Marked for Review
+            </p>
+          </div>
+
+          <div id="not-done" className="flex h-20 w-36 ml-4">
+            <div id="not-done-icon" className="flex h-20 w-20">
+              <svg width="90" height="82" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)">
+                <path d="M11.973 17.49c-.12-3.65 3.022-6.56 6.652-6.161l46.952 5.157a6 6 0 0 1 5.344 5.964v25.657a6 6 0 0 1-4.878 5.894L20.388 62.69c-3.618.689-6.997-2.016-7.118-5.697L11.973 17.49Z" fill="#D23434"/></g><path d="M39.683 41c-.48 0-.72-.235-.72-.704 0-.459.24-.688.72-.688h1.952v-7.984l-1.504.96c-.203.128-.395.165-.576.112a.771.771 0 0 1-.4-.336.773.773 0 0 1-.08-.512c.043-.192.165-.352.368-.48l2.208-1.392c.181-.107.352-.192.512-.256.17-.075.33-.112.48-.112a.64.64 0 0 1 .448.16c.128.107.192.272.192.496v9.344h1.792c.49 0 .736.23.736.688 0 .47-.245.704-.736.704h-5.392Z" fill="#fff"/><defs><filter id="a" x=".971" y=".292" width="88.951" height="81.504" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="4" dy="4"/><feGaussianBlur stdDeviation="7.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0.35 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_977_144"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="2" dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0.25 0"/><feBlend in2="effect1_dropShadow_977_144" result="effect2_dropShadow_977_144"/><feBlend in="SourceGraphic" in2="effect2_dropShadow_977_144" result="shape"/></filter></defs>
+              </svg>
+            </div>
+            <p className=" w-20 font-nunito font-semibold pt-7 -ml-1">
+              Not Done
+            </p>
+          </div>
+          
+          <div id="done-review" className="flex h-20 w-44">
+            <div id="done-review-icon" className="flex h-16 w-20">
+              <svg fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)"><rect x="11.799" y="11" width="52" height="52" rx="26" fill="#7E54BB"/></g><rect x="44.799" y="42" width="21" height="21" rx="10.5" fill="#34D26A"/>
+                <path d="M35.482 42c-.48 0-.72-.235-.72-.704 0-.459.24-.688.72-.688h1.952v-7.984l-1.504.96c-.203.128-.395.165-.576.112a.771.771 0 0 1-.4-.336.773.773 0 0 1-.08-.512c.043-.192.165-.352.368-.48l2.208-1.392c.181-.107.352-.192.512-.256.17-.075.33-.112.48-.112a.64.64 0 0 1 .448.16c.128.107.192.272.192.496v9.344h1.792c.49 0 .736.23.736.688 0 .47-.245.704-.736.704h-5.392Z" fill="#fff"/><defs><filter id="a" x=".799" y="0" width="82" height="82" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="4" dy="4"/><feGaussianBlur stdDeviation="7.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0.35 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_977_150"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dx="2" dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0.25 0"/><feBlend in2="effect1_dropShadow_977_150" result="effect2_dropShadow_977_150"/><feBlend in="SourceGraphic" in2="effect2_dropShadow_977_150" result="shape"/></filter></defs>
+              </svg>
+            </div>
+            <p className="flex flex-wrap w-40 font-nunito font-semibold pt-5 -ml-3">
+              Done and Marked for Review
+            </p>
+          </div>
+
+          
+
+          
+
+        </div>
+
+        <div id="subject">
+
+        </div>
+
+        <div id="question-number">
+
+        </div>
 
       </section>
     </div>
