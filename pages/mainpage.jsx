@@ -5,9 +5,17 @@ function mainpage() {
   return (
     <main>
     <Header/>
-    <div id="container" className="flex flex-wrap mt-9 justify-center h-full border-2 border-black">
-      
-      <div id="percentile-rank-marks" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center border-2 border-black ">
+    <div id="container" className="flex flex-wrap mt-9 justify-center h-full">
+      <div id="nav-buttons" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   select-none">
+        <button id="back-to-home" className="bg-gradient-to-r from-purple-500 to-purple-800 hover:from-purple-500 hover:to-purple-500 active:from-purple-500 active:to-purple-800 w-1/3 h-12 ml-16 mr-16 rounded-2xl cursor-pointer pt-1.5 pb-2 pl-1.5 pr-1.5 text-center text-base tracking-wide inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 hover:bg-red-800 active focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-violet-400 transition duration-180 ease-in-out " type="button" >
+          <p className="font-sans font-bold text-white inline-block">Back to Home</p>
+        </button>  
+        <button id="back-to-home" className="bg-gradient-to-r from-purple-500 to-purple-800 hover:from-purple-500 hover:to-purple-500 active:from-purple-500 active:to-purple-800 w-1/3 h-12 ml-16 mr-16 rounded-2xl cursor-pointer pt-1.5 pb-2 pl-1.5 pr-1.5 text-center text-base tracking-wide inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 hover:bg-red-800 active focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-violet-400 transition duration-180 ease-in-out " type="button" >
+          <p className="font-sans font-bold text-white inline-block">Leaderboard</p>
+        </button>  
+      </div>
+
+      <div id="percentile-rank-marks" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   ">
         
         <div id="percentile-rank" className="flex justify-center w-6/12 pl-2 pr-2 ml-6 mr-3 rounded-2xl items-center pt-4 pb-4 h-full bg-gradient-to-r from-teal-400 to-emerald-400 drop-shadow-xl">
           <div id="perentile-data" className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-teal-500 to-emerald-500 shadow-xl">
@@ -28,7 +36,7 @@ function mainpage() {
 
       </div>
 
-      <div id="total-marks-analysis" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center border-2 border-black ">
+      <div id="total-marks-analysis" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/5 justify-between items-center   ">
         
         <div id="marks-container" className="flex justify-center w-6/12 pl-2 pr-2 ml-6 mr-3 rounded-2xl items-center pt-4 pb-4 h-full bg-gradient-to-r from-sky-500 to-sky-300">
           <div id="marks-upon-total" className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-sky-600 to-sky-400 drop-shadow">
@@ -50,7 +58,7 @@ function mainpage() {
 
       </div>
 
-      <div id="graph-analysis-points" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center border-2 border-black ">
+      <div id="graph-analysis-points" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   ">
         <div id="graph-container1" className="flex justify-center w-full ml-3 mr-6 rounded-2xl items-center pt-4 pb-4 h-full  bg-gradient-to-r from-violet-600 to-violet-500">
           <div id="graph-points" className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600  drop-shadow">
 
@@ -58,7 +66,7 @@ function mainpage() {
         </div>
       </div>
       
-      <div id="graph-analysis-bar" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center border-2 border-black ">
+      <div id="graph-analysis-bar" className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   ">
         <div id="graph-container2" className="flex justify-center w-full ml-3 mr-6 rounded-2xl items-center pt-4 pb-4 h-full  bg-gradient-to-r from-fuchsia-600 to-fuchsia-400">
           <div id="graph-bar" className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600   drop-shadow">
             
