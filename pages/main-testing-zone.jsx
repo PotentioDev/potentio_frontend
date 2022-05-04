@@ -1,12 +1,45 @@
 import Link from "next/link";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {useTimer} from "react-timer-hook";
 import {All_Questions} from "../data";
 
 export default function MainTestingZone() {
   const [data, setData] = useState({
     currentQuestion: 0,
     questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 10),
+    filled_responses: Array(10).fill(-1),
+    marked_for_review: Array(10).fill(false),
+    visited_questions: Array(10).fill(false),
   });
+  const time = new Date();
+<<<<<<< HEAD
+      time.setSeconds(time.getSeconds() + 600);
+=======
+  time.setSeconds(time.getSeconds() + 600);
+  useEffect(() => {
+    setData({
+      ...data,
+      visited_questions: data.visited_questions.map((value, index) => {
+        if (index === data.currentQuestion) {
+          return true;
+        }
+        return value;
+      }),
+    })
+  }, [data.currentQuestion]);
+>>>>>>> eebd99b66a99c12649db34678a23c98c8e6dd72f
+
+  const {
+    seconds,
+    minutes,
+    hours,
+    days,
+    isRunning,
+    start,
+    pause,
+    resume,
+    restart,
+  } = useTimer({ time, onExpire: () => console.warn('onExpire called')});
 
   function next() {
     setData({
@@ -15,6 +48,7 @@ export default function MainTestingZone() {
     }
     );
   }
+  console.log(data)
 
   function back() {
     setData({
@@ -23,6 +57,12 @@ export default function MainTestingZone() {
     }
     );
   }
+
+  useEffect(() => {
+            const time = new Date();
+        time.setSeconds(time.getSeconds() + 600);
+        restart(time)
+  }, [])
 
   function generate_question_boxes() {
       const questions = [];
@@ -33,7 +73,12 @@ export default function MainTestingZone() {
                           currentQuestion: i,
             });
           }}
-        className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
+        className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
+<<<<<<< HEAD
+        style={{"background-color": data.marked_for_review[i]===true?"#7e54bb":(data.filled_responses[i]!==-1?"#34d26a":"#d23434"), "color": "white"}}>
+=======
+        style={{"background-color": data.visited_questions[i]===false?"white":(data.marked_for_review[i]===true?"#7e54bb":(data.filled_responses[i]!==-1?"#34d26a":"#d23434")), "color": data.visited_questions[i]===true?"white":"black"}}>
+>>>>>>> eebd99b66a99c12649db34678a23c98c8e6dd72f
       <p className="inline-block mt-0.5">{i+1}</p>
     </button>);
     }
@@ -145,7 +190,14 @@ function generate_options() {
                 id="Save_and_next"
                 className="mb-5 pt-1 pb-1.5 h-10 w-52 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out"
                 type="button"
+<<<<<<< HEAD
                 onClick={next}
+=======
+                onClick={() => {
+                  markForReview();
+                  next();
+                }}
+>>>>>>> eebd99b66a99c12649db34678a23c98c8e6dd72f
               >
                 <p className=" font-sans font-semibold text-gray-600 inline-block">
                   Mark for Review & Next
@@ -181,19 +233,19 @@ function generate_options() {
               </svg>
             </span>
             <span id="hours" className=" text-2xl font-medium">
-              01
+              {hours}
             </span>
             <span id="hr" className="pt-2">
               hr
             </span>
             <span id="minutes" className="text-2xl font-medium">
-              20
+              {minutes}
             </span>
             <span id="mins" className="pt-2">
               min
             </span>
             <span id="seconds" className="text-2xl font-medium">
-              22
+              {seconds}
             </span>
             <span id="secs" className="pt-2">
               sec
