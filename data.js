@@ -1,4 +1,4 @@
-const Chemistry_Question = [
+export const Chemistry_Question = [
   {
     Question_Text: "The enthalpy of neutralisation of a weak monoprotic acid HA in 1M solution with a strong base is - 55.956 kJ/mole. If the unionized acid requires 1.4 kJ/mole heat for its complete ionization, the dissociation constant of HA is (The heat of neutralisation of strong monobasic acid with a strong mono acidic base is - 57.3 kJ/mole)",
     Options: ["3.2 * 10^(-3)", "1.6 * 10^(-3)", "3.2 * 10^(-4)", "1.6 * 10^(-4)"],
@@ -81,7 +81,7 @@ const Chemistry_Question = [
   }
 ];
 
-const Physics_Question = [
+export const Physics_Question = [
   {
     Question_Text: "An unpolarized light of intensity 32W/m2 is incident on a polarizer whose transmission axis is vertical. Other two polarizer also placed in front of first such that first and last are crossed. The intensity of emergent light is 3W/m2, then the angle between the transmission axis of second and third polarizer will be",
     Options: ["30°", "45°", "60°", "90°"],
@@ -245,3 +245,5 @@ const Maths_Question = [
     Image: "https://i.imgur.com/IEd5Dy3.png",
   }
 ];
+
+export const All_Questions = Chemistry_Question.concat(Physics_Question);
