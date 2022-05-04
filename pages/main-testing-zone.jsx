@@ -77,6 +77,23 @@ function generate_options() {
   }
   return options;
 }
+
+  function save() {
+    console.log("save called")
+  }
+
+  function markForReview() {
+    setData({
+      ...data,
+      marked_for_review: data.marked_for_review.map((value, index) => {
+        if (index === data.currentQuestion) {
+          return !value;
+        }
+        return value;
+      }),
+    });
+  }
+
   return (
     <main>
       <div
@@ -116,7 +133,10 @@ function generate_options() {
                 id="Save_and_next"
                 className="bg-green-600 pt-1.5 pb-2 h-10 w-28 pl-1.5 pr-1.5 text-center text-base tracking-wide rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out "
                 type="button"
-                onClick={next}
+                onClick={() => {
+                  save();
+                  next();
+                }}
               >
                 <p className="font-sans font-bold text-white inline-block">
                   Save & Next
@@ -161,6 +181,10 @@ function generate_options() {
                 id="save_and_mark_for_review"
                 className=" bg-amber-500 pt-1.5 pb-1.5 h-10 w-52 text-center tracking-wide text-white text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-amber-600 transition duration-150 ease-in-out "
                 type="button"
+                onClick={() => {
+                  save();
+                  markForReview();
+                }}
               >
                 <p className="font-sans font-bold text-white inline-block">
                   Save & mark for Review
@@ -170,7 +194,10 @@ function generate_options() {
                 id="Save_and_next"
                 className="mb-5 pt-1 pb-1.5 h-10 w-52 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out"
                 type="button"
-                onClick={next}
+                onClick={() => {
+                  save();
+                  next();
+                }}
               >
                 <p className=" font-sans font-semibold text-gray-600 inline-block">
                   Mark for Review & Next
@@ -181,7 +208,10 @@ function generate_options() {
                   id="Save_and_next"
                   className="bg-green-600 ml-72 h-10 mb-11 pt-2 pb-5 pl-2.5 pr-2.5 w-32 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out"
                   type="button"
-                  onClick={next}
+                  onClick={() => {
+                    save();
+                    next();
+                  }}
                 >
                   <p className=" font-sans font-bold text-white inline-block">
                     Submit
