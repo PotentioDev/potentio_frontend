@@ -65,7 +65,7 @@ export default function Landingpage() {
                   </p>
                 </div>
                 <a
-                  href="https://trade.hedgeco.app/"
+                  href="/compete-zone"
                   style={{ textDecoration: "none" }}
                 >
                   <button
@@ -299,7 +299,7 @@ export default function Landingpage() {
                     </p>
                   </div>
                   <a
-                    href="https://trade.hedgeco.app/"
+                    href="compete-zone"
                     style={{ textDecoration: "none" }}
                   >
                     <button
