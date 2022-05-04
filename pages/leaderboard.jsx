@@ -7,7 +7,7 @@ function mainpage() {
       <Header />
       <div
         id="upper-section"
-        className="flex justify-around h-1/3 w-full py-20 "
+        className="flex justify-around h-1/3 w-full pt-20 "
       >
         <div id="rank-3" className="flex flex-col">
           <div id="photo" className="flex">
