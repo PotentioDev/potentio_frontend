@@ -7,6 +7,8 @@ export default function MainTestingZone() {
   const [data, setData] = useState({
     currentQuestion: 0,
     questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 10),
+    filled_responses: Array(10).fill(-1),
+    marked_for_review: Array(10).fill(false),
   });
   const time = new Date();
       time.setSeconds(time.getSeconds() + 600);
@@ -30,6 +32,7 @@ export default function MainTestingZone() {
     }
     );
   }
+  console.log(data)
 
   function back() {
     setData({
@@ -54,7 +57,8 @@ export default function MainTestingZone() {
                           currentQuestion: i,
             });
           }}
-        className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out">
+        className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
+        style={{"background-color": data.marked_for_review[i]===true?"#7e54bb":(data.filled_responses[i]!==-1?"#34d26a":"#d23434"), "color": "white"}}>
       <p className="inline-block mt-0.5">{i+1}</p>
     </button>);
     }
