@@ -21,7 +21,7 @@ const Chemistry_Question = [
     Answer: 3,
     Tags: ["Chemistry", "Thermochemistry"],
     Level: 4,
-    Image: "https://imgur.com/a/BtjWT2e",
+    Image: "https://i.imgur.com/8VgMPKd.png",
   },
   {
     Question_Text: "A crystal is made of particles X, Y and Z. X forms FCC packing, Y occupies all octahedral voids of X and Z occupies all tetrahedral voids of X. If all the particles along one body diagonal are removed, then the formula of crystal would be",
@@ -77,7 +77,7 @@ const Chemistry_Question = [
     Answer: "1",
     Tags: ["Chemistry", "Organic Chemistry"],
     Level: 1,
-    Image: "https://imgur.com/362Q5jg",
+    Image: "https://i.imgur.com/362Q5jg.png",
   }
 ];
 
@@ -104,7 +104,7 @@ const Physics_Question = [
     Answer: 3,
     Tags: ["Phyics", "Kinematics"],
     Level: 4,
-    Image: "https://imgur.com/5N4yYZa",
+    Image: "https://i.imgur.com/5N4yYZa.png",
   },
   {
     Question_Text: "Two blocks of masses 1 kg and 2 kg are connected by a metal wire going over a smooth pulley. The breaking stress of the metal is 2 * 10^9 N/m2. What should be minimum radius of the wire to be used if it is not to break? Take g = 10 m/s2",
@@ -128,7 +128,7 @@ const Physics_Question = [
     Answer: 2,
     Tags: ["Physics", "chemical kinetics"],
     Level: 1,
-    Image: "https://imgur.com/X4nvghN",
+    Image: "https://i.imgur.com/X4nvghN.png",
   },
   {
     Question_Text: "Two uncharged capacitors are connected to an ideal cell as shown in figure. The ratio of energy stored in capacitors C1 and C2 in steady state is:",
@@ -136,7 +136,7 @@ const Physics_Question = [
     Answer: 1,
     Tags: ["Physics", "Capacitors"],
     Level: 1,
-    Image: "https://imgur.com/QVQq3rZ",
+    Image: "https://i.imgur.com/aIbkdF4.png",
   },
   {
     Question_Text: "A nucleus with mass number 220 initially at rest emits an alpha-particle. If the Q value of the reaction is 5.5 MeV, calculate the kinetic energy of the alpha-particle.",
@@ -160,6 +160,88 @@ const Physics_Question = [
     Answer: 1,
     Tags: ["Physics", "Potentiometers"],
     Level: 2,
-    Image: "https://imgur.com/IEd5Dy3",
+    Image: "https://i.imgur.com/QVQq3rZ.png",
+  }
+];
+const Maths_Question = [
+  {
+    Question_Text: "Equation of the ellipse whose axes are the axes of coordinates, which passes through the point (-3, 1) and has eccentricity root(2 / 5) is",
+    Options: ["5x2 + 3y2 + 32 = 0", "3x2 + 5y2 + 32 = 0", "5x2 + 3y2 - 48 = 0", "3x2 + 5y2 - 15 = 0"],
+    Answer: 1,
+    Tags: ["Maths", "Coordinate Geometry"],
+    Level: 3,
+    Image: "",
+  },
+  {
+    Question_Text: "A screw gauge gives the following readings. Main scale reading = 0 mm. Circular scale reading = 52 divisions where 1mm on main scale corresponds to 100 divisions  of the circular scale. The radius of the wire is:",
+    Options: ["0.52 cm", "0.026 cm","0.052 cm" ,"0.26 cm"],
+    Answer: 0,
+    Tags: ["Maths", "Units and Measurements"],
+    Level: 3,
+    Image: "",
+  },
+  {
+    Question_Text: "A particle moving on a circular path with a constant speed v, light is thrown from a projector placed at the centre of the circular path. The shadow of the particle is formed on the wall. The velocity of shadow up the wall is",
+    Options: ["4.9 m", "9.8 m", "19.8 m", "24.7 m"],
+    Answer: 3,
+    Tags: ["Maths", "Kinematics"],
+    Level: 4,
+    Image: "https://i.imgur.com/5N4yYZa.png",
+  },
+  {
+    Question_Text: "Two blocks of masses 1 kg and 2 kg are connected by a metal wire going over a smooth pulley. The breaking stress of the metal is 2 * 10^9 N/m2. What should be minimum radius of the wire to be used if it is not to break? Take g = 10 m/s2",
+    Options: ["2.3 * 10^-5 m", "4.6 * 10^-5 m", "6.9 * 10^-5 m", "7.2 * 10^-5 m"],
+    Answer: 0,
+    Tags: ["Maths", "Kinematics"],
+    Level: 3,
+    Image: "",
+  },
+  {
+    Question_Text: "Two inductor coils of self inductance 3H and 6H respectively are connected with a resistance 10Ohn and a battery 10V as shown in figure. The ratio of total energy stored at steady state in the inductors to that of heat developed in resistance in 10 seconds at the steady state is (neglect mutual inductance between L1 and L2)",
+    Options: ["1/10", "1/100", "1/1000", "1"],
+    Answer: 1,
+    Tags: ["Maths", "EMI and AC"],
+    Level: 2,
+    Image: "",
+  },
+  {
+    Question_Text: "A parallel plate capacitor is moving with a velocity of 25 m/s through a uniform magnetic field of 1.5 T as shown. If the electric field within the capacitor plates is 175 N/C and plate area is 25 * 10^-7 m2, the magnetic force experienced by positive charged plate is",
+    Options: ["1.45 * 10^-13 N", "zero", "8.67 * 10^-15 N", "3.87 * 10^-5 N"],
+    Answer: 2,
+    Tags: ["Maths", "chemical kinetics"],
+    Level: 1,
+    Image: "https://i.imgur.com/X4nvghN.png",
+  },
+  {
+    Question_Text: "Two uncharged capacitors are connected to an ideal cell as shown in figure. The ratio of energy stored in capacitors C1 and C2 in steady state is:",
+    Options: ["17 : 7", "49 : 289", "289 : 49", "7 : 17"],
+    Answer: 1,
+    Tags: ["Maths", "Capacitors"],
+    Level: 1,
+    Image: "https://i.imgur.com/QVQq3rZ.png",
+  },
+  {
+    Question_Text: "A nucleus with mass number 220 initially at rest emits an alpha-particle. If the Q value of the reaction is 5.5 MeV, calculate the kinetic energy of the alpha-particle.",
+    Options: ["4.4 MeV", "5.4 MeV", "5.6 MeV", "6.5 MeV"],
+    Answer: 3,
+    Tags: ["Maths", "nuclear physics"],
+    Level: 2,
+    Image: "",
+  },
+  {
+    Question_Text: "A transistor is connected in common-emitter (C-E) configuration. The collector supply is 8V and the voltage drop across a resistor of 800 Ohm in the collector circuit is 0.5V. If the current gain factor (alpha) is 0.96, find the base current.",
+    Options: ["24 muA", "25 muA", "26 muA", "28 muA"],
+    Answer: 1,
+    Tags: ["Maths", "Semiconductors"],
+    Level: 3,
+    Image: "",
+  },
+  {
+    Question_Text: "In a RLC series circuit shown, the readings of voltmeters 1 V and 2 V are 100 V and 120 V, respectively. If source voltage is 130 V",
+    Options: ["Voltage across resistor is 50 V.", "Voltage across inductor is 86.6 V.", "Voltage across capacitor is 206.6 V.", "all of these"],
+    Answer: 1,
+    Tags: ["Maths", "Potentiometers"],
+    Level: 2,
+    Image: "https://i.imgur.com/IEd5Dy3.png",
   }
 ];
