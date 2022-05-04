@@ -51,25 +51,46 @@ export default function Home() {
             </p>
             <div className="flex justify-center flex-row">
               <div className="mx-[3em] cardB transition duration-500 hover:scale-110 relative">
-                <img className="absolute right-0 bottom-0 "src="shield.png"></img>
+                <img
+                  className="absolute right-0 bottom-0 "
+                  src="shield.png"
+                ></img>
                 <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">5 Minute</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Duel</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    5 Minute
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Duel
+                  </p>
                 </div>
-                
               </div>
+
               <div className="mx-[3em] cardPk transition duration-500 hover:scale-110 relative ">
-                <img className="absolute right-0 bottom-0 "src="eliminated.png"></img>
+                <img
+                  className="absolute right-0 bottom-0 "
+                  src="eliminated.png"
+                ></img>
                 <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Timed</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Timed
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Test
+                  </p>
                 </div>
               </div>
               <div className="mx-[3em] cardPl transition duration-500 hover:scale-110  relative">
-                <img className="absolute right-0 bottom-0 "src="triangle.png"></img>
+                <img
+                  className="absolute right-0 bottom-0 "
+                  src="triangle.png"
+                ></img>
                 <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Elimination</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Elimination
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Test
+                  </p>
                 </div>
               </div>
             </div>
@@ -79,17 +100,31 @@ export default function Home() {
             </p>
             <div className="flex justify-center flex-row">
               <div className="mx-[4em] cardG transition duration-500 hover:scale-110 relative">
-                <img className="absolute left-10 bottom-0 "src="rings.png"></img>
+                <img
+                  className="absolute left-10 bottom-0 "
+                  src="rings.png"
+                ></img>
                 <div className="absolute top-20 left-10">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Personalised</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Personalised
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Test
+                  </p>
                 </div>
               </div>
               <div className="mx-[4em] cardR transition duration-500 hover:scale-110 relative">
-                <img className="absolute left-10 bottom-0 "src="bromine.png"></img>
+                <img
+                  className="absolute left-10 bottom-0 "
+                  src="bromine.png"
+                ></img>
                 <div className="absolute top-20 left-10">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Custom</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Custom
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Test
+                  </p>
                 </div>
               </div>
             </div>
@@ -99,25 +134,45 @@ export default function Home() {
             </p>
             <div className="flex justify-center flex-row">
               <div className="mx-[3em] cardB transition duration-500 hover:scale-110 relative">
-                <img className="absolute right-0 bottom-0 "src="shield.png"></img>
+                <img
+                  className="absolute right-0 bottom-0 "
+                  src="shield.png"
+                ></img>
                 <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">5 Minute</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Duel</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    5 Minute
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Duel
+                  </p>
                 </div>
-                
               </div>
               <div className="mx-[3em] cardPk transition duration-500 hover:scale-110 relative ">
-                <img className="absolute right-0 bottom-0 "src="eliminated.png"></img>
+                <img
+                  className="absolute right-0 bottom-0 "
+                  src="eliminated.png"
+                ></img>
                 <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Timed</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Timed
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Test
+                  </p>
                 </div>
               </div>
               <div className="mx-[3em] cardPl transition duration-500 hover:scale-110 relative">
-                <img className="absolute right-0 bottom-0 "src="triangle.png"></img>
+                <img
+                  className="absolute right-0 bottom-0 "
+                  src="triangle.png"
+                ></img>
                 <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Elimination</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Elimination
+                  </p>
+                  <p className="font-nunitoEB text-2xl text-white text-right ">
+                    Test
+                  </p>
                 </div>
               </div>
             </div>
