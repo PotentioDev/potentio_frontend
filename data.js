@@ -321,9 +321,25 @@ export const All_Questions = Chemistry_Question.concat(
 
 const Profiles = [
   {
-
+    name: "Heemank Verma",
+    total: 179,
+    Physics: 60,
+    Maths: 59,
+    Chemistry: 60,
   },
   {
-
+    name: "Yashwardhan Chaudhuri",
+    total: 200,
+    Physics: 70,
+    Maths: 50,
+    Chemistry: 80,
   }
-]
+  ,
+  {
+    name: "Aditya Pratap Singh",
+    total: 210,
+    Physics: 80,
+    Maths: 50,
+    Chemistry: 80,
+  },
+];
