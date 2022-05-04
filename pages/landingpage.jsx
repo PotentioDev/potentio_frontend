@@ -9,7 +9,7 @@ export default function Landingpage() {
     <lol>
       <Header />
       <div hidden="" id="desktop">
-        <div style={{ marginLeft: "7.5vw", marginTop: "20vh" }}>
+        <div style={{ marginLeft: "7.5vw", marginTop: "5vh" }}>
           <div style={{ display: "flex" }}>
             <div style={{ position: "relative", marginTop: 150 }}>
               <img
