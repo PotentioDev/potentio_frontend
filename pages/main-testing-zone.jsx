@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function testing() {
@@ -126,15 +127,17 @@ export default function testing() {
                   Mark for Review & Next
                 </p>
               </button>
-              <button
-                id="Save_and_next"
-                className="bg-green-600 ml-72 h-10 mb-11 pt-2 pb-5 pl-2.5 pr-2.5 w-32 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out"
-                type="button"
-              >
-                <p className=" font-sans font-bold text-white inline-block">
-                  Submit
-                </p>
-              </button>
+                <Link href={"result"} passHref>
+                  <button
+                    id="Save_and_next"
+                    className="bg-green-600 ml-72 h-10 mb-11 pt-2 pb-5 pl-2.5 pr-2.5 w-32 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out"
+                    type="button"
+                  >
+                    <p className=" font-sans font-bold text-white inline-block">
+                      Submit
+                    </p>
+                  </button>
+                  </Link>
             </div>
           </div>
         </section>

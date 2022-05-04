@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../components/Header";
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
               Short Test
             </p>
             <div className="flex justify-center flex-row">
-              <div className="mx-[3em] cardB "></div>
+              <Link href="main-testing-zone" passHref><div className="mx-[3em] cardB "></div></Link>
               <div className="mx-[3em] cardPk "></div>
               <div className="mx-[3em] cardPl "></div>
             </div>

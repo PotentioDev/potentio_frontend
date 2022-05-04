@@ -17,9 +17,9 @@ export default function Header() {
         </div>
       </Link>
       <ul id="Otions" className="flex space-x-10 list-none px-8">
-        {[["Compete"], ["Membership"], ["Gym"], ["Dashboard"]].map(
-          ([title]) => (
-            <li className="font-nunito text-xs cursor-pointer">{title}</li>
+        {[["Compete", "compete-zone"], ["Membership", ""], ["Gym", ""], ["Dashboard", ""]].map(
+          ([title, link]) => (
+            <Link href={link} passHref><li className="font-nunito text-xs cursor-pointer">{title}</li></Link>
           )
         )}
         {/* <li className="">Compete</li>
