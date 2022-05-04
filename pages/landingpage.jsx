@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Header from "../components/Header";
-
+import Laptop1 from "../public/assets/svg/laptop1.svg";
 export default function Landingpage() {
   return (
     <lol>
@@ -132,8 +132,8 @@ export default function Landingpage() {
               }}
             >
               <div style={{ margin: "1vw", color: "black", fontWeight: "bold" }}>Welcome</div>
-              <div style={{ margin: "1vw" }}>to</div>
-              <div style={{ margin: "1vw", color: "#4C7AA3" }}>Growth</div>
+              <div style={{ fontWeight: "bold" }}>to</div>
+              <div style={{ margin: "1vw", color: "#00C566", fontWeight: "bold"}}>Growth</div>
             </div>
             <div
               style={{
@@ -146,7 +146,7 @@ export default function Landingpage() {
             >
               <div>
                 <img
-                  src="probability_screen.png"
+                  src={Laptop1}
                   style={{ height: "25vw", margin: "auto" }}
                   alt="HedgeCo - Say yes to Probability"
                 />
