@@ -96,7 +96,7 @@ export default function Landingpage() {
               }}
             >
               <img
-                src="purple.svg"
+                src="b.png"
                 style={{ width: "40vw" }}
                 alt="Stay Up To Date - Get Updates from HedgCo at Whatsapp"
               />
@@ -110,7 +110,7 @@ export default function Landingpage() {
                   }}
                 >
                   <img
-                    src="header1.png"
+                    src="runny.png"
                     style={{ width: "45vw" }}
                     alt="Trade crypto opinion: Yes or No"
                   />
@@ -146,9 +146,7 @@ export default function Landingpage() {
             >
               <div>
                 <img
-                  src={Laptop1}
-                  style={{ height: "25vw", margin: "auto" }}
-                  alt="HedgeCo - Say yes to Probability"
+                  src="imgL.png"
                 />
                 <p
                   style={{
@@ -159,8 +157,8 @@ export default function Landingpage() {
                     fontWeight: 600,
                   }}
                 >
-                  <span style={{ color: "#00C566" }}> Probability </span>{" "}
-                  Determines <span style={{ color: "#00C566" }}>Price</span>{" "}
+                  <span style={{ color: "#00C566" }}> State-of-art </span>{" "}
+                  Leaderboard <span style={{ color: "#00C566" }}>designs</span>{" "}
                 </p>
                 <p
                   style={{
@@ -171,14 +169,12 @@ export default function Landingpage() {
                   }}
                 >
                   {" "}
-                  The "Yes" market price is the chance an event will happen{" "}
+                  These leaderboards just motivate you to go ahead without stress!{" "}
                 </p>
               </div>
               <div>
                 <img
-                  src="trading_likelyhood.png"
-                  style={{ height: "25vw", margin: "auto" }}
-                  alt="Opinion on Trading Buy and sell"
+                  src="imgC.png"
                 />
                 <p
                   style={{
@@ -190,8 +186,8 @@ export default function Landingpage() {
                   }}
                 >
                   {" "}
-                  Trading <span style={{ color: "#A0318E" }}>
-                    Likelihood{" "}
+                  Variety <span style={{ color: "#A0318E" }}>
+                    of tests{" "}
                   </span>{" "}
                 </p>
                 <p
@@ -203,15 +199,12 @@ export default function Landingpage() {
                   }}
                 >
                   {" "}
-                  Buy and sell positions and profit as events become more or
-                  less likely over time{" "}
+                  Tests for every level of preparation so that you always grow!{" "}
                 </p>
               </div>
               <div>
                 <img
-                  src="profit_screen.png"
-                  style={{ height: "25vw", margin: "auto" }}
-                  alt="Profit from your Opinions"
+                  src="imgT.png"
                 />
                 <p
                   style={{
@@ -222,8 +215,7 @@ export default function Landingpage() {
                     fontWeight: 600,
                   }}
                 >
-                  <span style={{ color: "#4C7AA3" }}>Profit</span> from your{" "}
-                  <span style={{ color: "#4C7AA3" }}>Opinions</span>{" "}
+                  <span style={{ color: "#4C7AA3" }}>JEE like</span> Testing UI{" "}
                 </p>
                 <p
                   style={{
@@ -234,8 +226,7 @@ export default function Landingpage() {
                   }}
                 >
                   {" "}
-                  When the market closes earn INR 10 for every correct contract
-                  you own{" "}
+                  So that you are familiar with real JEE testing from the beginning of your journey!{" "}
                 </p>
               </div>
             </div>
@@ -271,7 +262,7 @@ export default function Landingpage() {
                   <div
                     style={{
                       left: "5vw",
-                      borderLeft: "6px solid #A0318E",
+                      borderLeft: "6px solid #438FF2",
                       marginRight: "1vw",
                       padding: 0,
                       paddingLeft: "1vw",
@@ -286,12 +277,12 @@ export default function Landingpage() {
                         padding: 0,
                       }}
                     >
-                      <span style={{ color: "#B62D8F" }}> Talk </span> is cheap,
-                      <br /> <span style={{ color: "#B62D8F" }}>
+                      <span style={{ color: "#438FF2" }}> Talk </span> cannot guarantee,
+                      <br /> <span style={{ color: "#438FF2" }}>
                         {" "}
-                        Opinions
+                        Research
                       </span>{" "}
-                      aren't
+                      can...
                     </p>
                     <p
                       style={{
@@ -301,8 +292,7 @@ export default function Landingpage() {
                       }}
                     >
                       {" "}
-                      Learn and Trade on Topics That Matter like Economics,
-                      Finance, Crypto and Many More .{" "}
+                      Check your preparation level with this tiny test .{" "}
                     </p>
                   </div>
                   <a
@@ -313,7 +303,7 @@ export default function Landingpage() {
                       style={{
                         marginLeft: "10vw",
                         marginTop: 30,
-                        background: "#B62D8F",
+                        background: "#438FF2",
                         boxShadow: "10px 10px 35px #D7D7D7",
                         borderRadius: 15,
                         borderColor: "transparent",
@@ -337,9 +327,7 @@ export default function Landingpage() {
                 }}
               >
                 <img
-                  src="markets_svg.svg"
-                  style={{ width: "25vw" }}
-                  alt="Opinion on Healthcare, Elections, Finance, Startups, Banking, Crypto"
+                  src="pot.svg"
                 />
               </div>
             </div>
