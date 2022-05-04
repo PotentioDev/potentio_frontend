@@ -1,5 +1,6 @@
 import Link from "next/link";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import {useTimer} from "react-timer-hook";
 import {All_Questions} from "../data";
 
 export default function MainTestingZone() {
@@ -7,6 +8,20 @@ export default function MainTestingZone() {
     currentQuestion: 0,
     questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 10),
   });
+  const time = new Date();
+      time.setSeconds(time.getSeconds() + 600);
+
+  const {
+    seconds,
+    minutes,
+    hours,
+    days,
+    isRunning,
+    start,
+    pause,
+    resume,
+    restart,
+  } = useTimer({ time, onExpire: () => console.warn('onExpire called')});
 
   function next() {
     setData({
@@ -23,6 +38,12 @@ export default function MainTestingZone() {
     }
     );
   }
+
+  useEffect(() => {
+            const time = new Date();
+        time.setSeconds(time.getSeconds() + 600);
+        restart(time)
+  }, [])
 
   function generate_question_boxes() {
       const questions = [];
@@ -181,19 +202,19 @@ function generate_options() {
               </svg>
             </span>
             <span id="hours" className=" text-2xl font-medium">
-              01
+              {hours}
             </span>
             <span id="hr" className="pt-2">
               hr
             </span>
             <span id="minutes" className="text-2xl font-medium">
-              20
+              {minutes}
             </span>
             <span id="mins" className="pt-2">
               min
             </span>
             <span id="seconds" className="text-2xl font-medium">
-              22
+              {seconds}
             </span>
             <span id="secs" className="pt-2">
               sec
