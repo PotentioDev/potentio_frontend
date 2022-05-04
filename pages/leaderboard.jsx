@@ -30,7 +30,7 @@ function mainpage() {
         </div>
         <div id="rank-1" className="flex flex-col">
           <img
-            className="  w-44 h-44 shadow-xl rounded-full"
+            className=" -mt-4 w-44 h-44 shadow-xl rounded-full"
             src="https://via.placeholder.com/170x170"
           />
           <p className="flex font-nunito text-2xl font-extrabold text-center text-green-500">
