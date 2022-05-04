@@ -1,7 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Header from './header'
+import Header from '../src/components/Header'
 export default function Home() {
   return (
     <main>
@@ -11,9 +8,9 @@ export default function Home() {
           <div className="flex flex-wrap justify-start w-1/2 h-full py-40">
                 <div className="flex ml-20 text-6xl w-3/5 font-comfortaa text-gray-700">Compete Zone</div>
                 <div className="flex">
-                  <p class="text-xl font-regular text-red-500 ml-20 pr-2">Unlock</p>
-                  <p class="text-xl font-regular">your potential</p>
-                </div>    
+                  <p className="text-xl font-regular text-red-500 ml-20 pr-2">Unlock</p>
+                  <p className="text-xl font-regular">your potential</p>
+                </div>
           </div>
           <div className="flex justify-center w-1/2 mr-6 h-full ">
               <div className="relative cardY h-[22rem] w-[32rem] mt-20">
