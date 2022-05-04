@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { useTimer } from "react-timer-hook";
-import { All_Questions } from "../data";
+import React, {useEffect, useState} from "react";
+import {useTimer} from "react-timer-hook";
+import {All_Questions} from "../data";
 
 export default function MainTestingZone() {
   const [data, setData] = useState({
@@ -11,7 +11,7 @@ export default function MainTestingZone() {
     marked_for_review: Array(10).fill(false),
   });
   const time = new Date();
-  time.setSeconds(time.getSeconds() + 600);
+      time.setSeconds(time.getSeconds() + 600);
 
   const {
     seconds,
@@ -23,73 +23,60 @@ export default function MainTestingZone() {
     pause,
     resume,
     restart,
-  } = useTimer({ time, onExpire: () => console.warn("onExpire called") });
+  } = useTimer({ time, onExpire: () => console.warn('onExpire called')});
 
   function next() {
     setData({
       ...data,
-      currentQuestion: (data.currentQuestion + 1) % 10,
-    });
+      currentQuestion: (data.currentQuestion + 1)%10,
+    }
+    );
   }
-  console.log(data);
+  console.log(data)
 
   function back() {
     setData({
       ...data,
-      currentQuestion: (data.currentQuestion - 1) % 10,
-    });
+      currentQuestion: (data.currentQuestion - 1)%10,
+    }
+    );
   }
 
   useEffect(() => {
-    const time = new Date();
-    time.setSeconds(time.getSeconds() + 600);
-    restart(time);
-  }, []);
+            const time = new Date();
+        time.setSeconds(time.getSeconds() + 600);
+        restart(time)
+  }, [])
 
   function generate_question_boxes() {
-    const questions = [];
+      const questions = [];
     for (let i = 0; i <= 9; i++) {
-      questions.push(
-        <button
+      questions.push(<button
           onClick={() => {
-            setData({ ...data, currentQuestion: i });
+            setData({...data,
+                          currentQuestion: i,
+            });
           }}
-          className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
-          style={{
-            "background-color":
-              data.marked_for_review[i] === true
-                ? "#7e54bb"
-                : data.filled_responses[i] !== -1
-                ? "#34d26a"
-                : "#d23434",
-            color: "white",
-          }}
-        >
-          <p className="inline-block mt-0.5">{i + 1}</p>
-        </button>
-      );
+        className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
+        style={{"background-color": data.marked_for_review[i]===true?"#7e54bb":(data.filled_responses[i]!==-1?"#34d26a":"#d23434"), "color": "white"}}>
+      <p className="inline-block mt-0.5">{i+1}</p>
+    </button>);
     }
 
     return questions;
-  }
-  function generate_options() {
-    const options = [];
-    for (
-      let i = 0;
-      i < data.questions[data.currentQuestion].Options.length;
-      i++
-    ) {
-      options.push(
+}
+function generate_options() {
+  const options = [];
+  for (let i = 0; i < data.questions[data.currentQuestion].Options.length; i++) {
+    options.push(
         <div className="text-gray-700 w-44 p-4">
-          <input type="radio" value="" name="user-answer" />
-          <span className=" ml-0.5">
-            {data.questions[data.currentQuestion].Options[i]}
-          </span>
+          <input type="radio" value="" name="user-answer"/>
+          <span className=" ml-0.5">{data.questions[data.currentQuestion].Options[i]}</span>
         </div>
-      );
-    }
-    return options;
+    )
   }
+  return options;
+}
   return (
     <main>
       <div
@@ -109,16 +96,8 @@ export default function MainTestingZone() {
             </header>
 
             <div id="question" className="w-auto h-64">
-              {data.questions[data.currentQuestion].Question_Text}
-              {data.questions[data.currentQuestion].Image ? (
-                <img
-                  src={data.questions[data.currentQuestion].Image}
-                  height="50"
-                  width="100"
-                />
-              ) : (
-                ""
-              )}
+                {data.questions[data.currentQuestion].Question_Text}
+              {data.questions[data.currentQuestion].Image?<img src={data.questions[data.currentQuestion].Image}/>:""}
             </div>
 
             <div className=" mt-1 flex flex-wrap w-8/12 justify-between pb-4 grid grid-cols-2">
@@ -557,9 +536,11 @@ export default function MainTestingZone() {
             className="font-nunito justify-around flex-wrap flex text-base font-semibold text-center w-96 p-7 pt-0 pb-3"
           >
             <div className="grid grid-cols-5 gap-4">
-              {generate_question_boxes()}
-            </div>
+              {generate_question_boxes()
+              }
+
           </div>
+            </div>
         </section>
       </div>
     </main>
