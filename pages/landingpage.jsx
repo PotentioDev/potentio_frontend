@@ -96,7 +96,7 @@ export default function Landingpage() {
               }}
             >
               <img
-                src="https://i.imgur.com/52KU0X6.png"
+                src="b.png"
                 style={{ width: "40vw" }}
                 alt="Potentio run logo"
               />
@@ -109,6 +109,11 @@ export default function Landingpage() {
                     flexDirection: "column",
                   }}
                 >
+                  <img
+                    src="runny.png"
+                    style={{ width: "45vw" }}
+                    alt="Trade crypto opinion: Yes or No"
+                  />
                 </div>
               </div>
             </div>
