@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.cardY{
+    background: linear-gradient(309.73deg, #F9CC1E 12.72%, #D8B200 99.9%);
+    box-shadow: 16px -2px 25px rgba(199, 65, 45, 0.15), -13px 18px 21px rgba(255, 206, 20, 0.15);
+    border-radius: 88px;
+  }
+
+.cardB{
+    width: 310px;
+    height: 200px;
+    background: linear-gradient(297.14deg, #4273F2 4.97%, #42BCF1 107.96%);
+    box-shadow: 2px 46px 35px -48px rgba(66, 139, 242, 0.65);
+    border-radius: 22px;
+}
+
+.cardPk{
+    width: 310px;
+    height: 200px;
+    background: linear-gradient(113.47deg, #F090B5 1.76%, #E36186 98.33%);
+    box-shadow: 2px 46px 35px -48px #EC7FA4;
+    border-radius: 22px;
+}
+
+.cardPl{
+    width: 310px;
+    height: 200px;
+    background: linear-gradient(113.47deg, #AC9EF8 1.76%, #8D7AF4 98.33%);
+    box-shadow: 2px 46px 35px -48px #9F8FF7;
+    border-radius: 22px;
+}
+
+.cardG{
+    width:500px;
+    height:320px;
+    background: linear-gradient(297.14deg, #12874F 4.97%, #65FFC8 107.96%);
+    box-shadow: 2px 46px 35px -48px #138850;
+    border-radius: 22px;
+}
+
+.cardR{
+    width:500px;
+    height:320px;
+    background: linear-gradient(113.47deg, #FF9A9A 1.76%, #FF3E3E 98.33%);
+    box-shadow: 2px 46px 35px -48px #FF5151;
+    border-radius: 22px;
+}

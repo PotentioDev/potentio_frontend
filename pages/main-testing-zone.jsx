@@ -6,7 +6,7 @@ export default function testing() {
   return (
     <main>
     <Header/>
-    <div id="container" className="flex mt-9 justify-center w-full h-full pb-6">
+    <div id="container" className="flex mt-9 justify-center w-full h-full pb-6 ">
       <section id="left-section" className="flex flex-col w-7/12  text-2xl">
         <div id="question-container" className="flex-col pl-8 mb-5 rounded-3xl shadow-inner shadow-gray-400 h-11/12 font-comfortaa"> 
           
