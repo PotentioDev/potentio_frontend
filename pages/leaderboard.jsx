@@ -12,7 +12,7 @@ function mainpage() {
         <div id="rank-3" className="flex flex-col">
           <div id="photo" className="flex">
             <img
-              className=" mt-16 ml-96 w-32 h-32 shadow rounded-full"
+              className=" mt-16 ml-96 w-32 h-32 shadow-xl rounded-full"
               src="https://via.placeholder.com/170x170"
             />
           </div>
@@ -23,21 +23,21 @@ function mainpage() {
             <p className=" flex -mt-4 pl-4  ml-96 font-nunito text-xl font-extrabold leading-9 text-center text-gray-800">
               John Doe
             </p>
-            <p className="  flex ml-96 font-nunito text-xl font-extrabold leading-9 text-center text-gray-800">
+            <p className=" pl-1 flex ml-96 font-nunito text-xl font-extrabold leading-9 text-center text-gray-800">
               Marks: 300
             </p>
           </div>
         </div>
         <div id="rank-1" className="flex flex-col">
           <img
-            className="  w-44 h-44 shadow rounded-full"
+            className="  w-44 h-44 shadow-xl rounded-full"
             src="https://via.placeholder.com/170x170"
           />
-          <p className="flex pl-3 font-nunito text-2xl font-extrabold text-center text-green-500">
+          <p className="flex font-nunito text-2xl font-extrabold text-center text-green-500">
             1<sup className="mt-4">st</sup>
           </p>
-          <p className=" -mt-4 ml-9 flex font-nunito text-2xl font-extrabold leading-9 text-center text-gray-800">
-            John Doe
+          <p className=" -mt-4 ml-3 flex font-nunito text-2xl font-extrabold leading-9 text-center text-gray-800">
+            Anshul Bhatia
           </p>
           <p className="  flex ml-6 -mr-96 font-nunito text-2xl font-extrabold leading-9 text-center text-gray-800">
             Marks: 300
@@ -45,16 +45,16 @@ function mainpage() {
         </div>
         <div id="rank-1" className="flex flex-col">
           <img
-            className=" mt-16 mr-96 w-32 h-32 shadow rounded-full"
+            className=" mt-16 mr-96 w-32 h-32 rounded-full shadow-xl"
             src="https://via.placeholder.com/170x170"
           />
-          <p className=" flex -ml-3 font-nunito text-xl font-extrabold text-center text-yellow-400">
+          <p className=" flex -ml-3 font-nunito text-xl font-extrabold text-center text-blue-500">
             2<sup className="mt-4">nd</sup>
           </p>
-          <p className=" -mt-4 flex ml-4 font-nunito text-xl font-extrabold leading-9 text-center text-gray-800">
-            John Doe
+          <p className=" -mt-4 flex pl-1 font-nunito text-xl font-extrabold leading-9 text-center text-gray-800">
+            Faizan Haider
           </p>
-          <p className="  flex font-nunito ml-4 text-xl font-extrabold leading-9 text-center text-gray-800">
+          <p className="  flex font-nunito ml-2 text-xl font-extrabold leading-9 text-center text-gray-800">
             Marks: 300
           </p>
         </div>
