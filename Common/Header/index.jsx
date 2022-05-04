@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <nav id="navigation-bar" className="flex mt-11 mx-12 w-9/10 h-16 shadow-2xl rounded-full justify-center items-center">
+    <nav id="navigation-bar" className="flex mt-11 mx-12 w-11/12 h-16 shadow-2xl rounded-full justify-center items-center">
       <div id="Potentio-logo" className="flex font-comfortaa bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl m-4">Potentio</div>
       <ul id="Otions" className="flex space-x-12 list-none mx-4">
         {[
