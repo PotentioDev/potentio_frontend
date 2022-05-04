@@ -6,19 +6,19 @@ export default function Home() {
   return (
     <main>
       <Header/>
-      <div id="container" className="flex flex-col mt-9 justify-center w-full h-full pb-6 divide-y ">
-        <section id="top portion" className="flex flex-row h-1/3 w-full  pb-6 ">
-          <div className="flex flex-col w-1/3 h-full  pl-40 py-40 ">
-                <p class="flex flex-row w-full text-6xl font-comfortaa text-gray-700">Compete Zone</p>
-                <div className="flex flex-row">
-                  <p class="text-xl font-regular text-red-500 pr-2">Unlock</p>
+      <div id="container" className="flex flex-col mt-9 jutify-around w-full h-full pb-6 divide-y ">
+        <section id="top portion" className="flex flex-row justify-around  h-1/3 w-full  pb-6 ">
+          <div className="flex flex-wrap justify-start w-1/2 h-full py-40">
+                <div className="flex ml-20 text-6xl w-3/5 font-comfortaa text-gray-700">Compete Zone</div>
+                <div className="flex">
+                  <p class="text-xl font-regular text-red-500 ml-20 pr-2">Unlock</p>
                   <p class="text-xl font-regular">your potential</p>
                 </div>    
           </div>
-          <div className="flex flex-col  w-2/3 h-full ">
-              <div className="relative cardY h-[22rem] w-[32rem]  ml-80 mt-20">
+          <div className="flex justify-center w-1/2 mr-6 h-full ">
+              <div className="relative cardY h-[22rem] w-[32rem] mt-20">
                 <div className="absolute left-10 bottom-10">
-                  <div className="relative justify-center cardY h-[18rem] w-[28rem] ">
+                  <div className="justify-center cardY h-[18rem] w-[28rem] ">
                     <img className="absolute centre top-[-50px]" src="run.png"></img>
                   </div>
                 </div>
