@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../components/Header";
 
 export default function Home() {
@@ -49,28 +50,9 @@ export default function Home() {
               Short Test
             </p>
             <div className="flex justify-center flex-row">
-              <div className="mx-[3em] cardB transition duration-500 hover:scale-110 relative">
-                <img className="absolute right-0 bottom-0 "src="shield.png"></img>
-                <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">5 Minute</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Duel</p>
-                </div>
-                
-              </div>
-              <div className="mx-[3em] cardPk transition duration-500 hover:scale-110 relative ">
-                <img className="absolute right-0 bottom-0 "src="eliminated.png"></img>
-                <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Timed</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
-                </div>
-              </div>
-              <div className="mx-[3em] cardPl transition duration-500 hover:scale-110  relative">
-                <img className="absolute right-0 bottom-0 "src="triangle.png"></img>
-                <div className="absolute top-20 left-3">
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Elimination</p>
-                  <p className="font-nunitoEB text-2xl text-white text-right ">Test</p>
-                </div>
-              </div>
+              <Link href="main-testing-zone" passHref><div className="mx-[3em] cardB "></div></Link>
+              <div className="mx-[3em] cardPk "></div>
+              <div className="mx-[3em] cardPl "></div>
             </div>
             <p className=" flex justify-start font-nunitoEB text-2xl text-gray-700 pl-20 pb-5 mt-20">
               {" "}

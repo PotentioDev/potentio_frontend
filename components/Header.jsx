@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import React from "react";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -7,16 +8,18 @@ export default function Header() {
       id="navigation-bar"
       className="flex mt-10 mx-12 w-11/12 h-16 shadow-2xl rounded-full justify-center items-center select-none"
     >
-      <div
-        id="Potentio-logo"
-        className="flex cursor-pointer font-comfortaa bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl px-8"
-      >
-        Potentio
-      </div>
+      <Link href="compete-zone" passHref>
+        <div
+          id="Potentio-logo"
+          className="flex cursor-pointer font-comfortaa bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl px-8"
+        >
+          Potentio
+        </div>
+      </Link>
       <ul id="Otions" className="flex space-x-10 list-none px-8">
-        {[["Compete"], ["Membership"], ["Gym"], ["Dashboard"]].map(
-          ([title]) => (
-            <li className="font-nunito text-xs cursor-pointer">{title}</li>
+        {[["Compete", "compete-zone"], ["Membership", ""], ["Gym", ""], ["Dashboard", ""]].map(
+          ([title, link]) => (
+            <Link href={link} passHref><li className="font-nunito text-xs cursor-pointer">{title}</li></Link>
           )
         )}
         {/* <li className="">Compete</li>
