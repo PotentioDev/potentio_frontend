@@ -9,9 +9,21 @@ export default function MainTestingZone() {
     questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 10),
     filled_responses: Array(10).fill(-1),
     marked_for_review: Array(10).fill(false),
+    visited_questions: Array(10).fill(false),
   });
   const time = new Date();
       time.setSeconds(time.getSeconds() + 600);
+  useEffect(() => {
+    setData({
+      ...data,
+      visited_questions: data.visited_questions.map((value, index) => {
+        if (index === data.currentQuestion) {
+          return true;
+        }
+        return value;
+      }),
+    })
+  }, [data.currentQuestion]);
 
   const {
     seconds,
@@ -58,7 +70,7 @@ export default function MainTestingZone() {
             });
           }}
         className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
-        style={{"background-color": data.marked_for_review[i]===true?"#7e54bb":(data.filled_responses[i]!==-1?"#34d26a":"#d23434"), "color": "white"}}>
+        style={{"background-color": data.visited_questions[i]===false?"white":(data.marked_for_review[i]===true?"#7e54bb":(data.filled_responses[i]!==-1?"#34d26a":"#d23434")), "color": data.visited_questions[i]===true?"white":"black"}}>
       <p className="inline-block mt-0.5">{i+1}</p>
     </button>);
     }
@@ -195,7 +207,7 @@ function generate_options() {
                 className="mb-5 pt-1 pb-1.5 h-10 w-52 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 active:bg-gray-100 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 transition duration-150 ease-in-out"
                 type="button"
                 onClick={() => {
-                  save();
+                  markForReview();
                   next();
                 }}
               >
