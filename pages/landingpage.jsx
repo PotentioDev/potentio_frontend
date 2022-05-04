@@ -3,12 +3,13 @@
 import React from "react";
 import Header from "../components/Header";
 import Laptop1 from "../public/assets/svg/laptop1.svg";
+import Symbols from "../public/assets/svg/symbols.svg";
 export default function Landingpage() {
   return (
     <lol>
       <Header />
       <div hidden="" id="desktop">
-        <div style={{ marginLeft: "7.5vw", marginTop: "20vh" }}>
+        <div style={{ marginLeft: "7.5vw", marginTop: "5vh" }}>
           <div style={{ display: "flex" }}>
             <div style={{ position: "relative", marginTop: 150 }}>
               <img
@@ -73,7 +74,6 @@ export default function Landingpage() {
                       marginTop: 30,
                       backgroundImage: "linear-gradient(-63deg, rgba(66, 125.84, 242, 1), rgba(66, 188.50, 241, 1))",
                       boxShadow: "2px 46px 35px -48px rgba(66, 128, 242, 1)",
-                      // boxShadow: "10px 10px 35px #D7D7D7",
                       borderRadius: 15,
                       borderColor: "transparent",
                       color: "white",
@@ -98,7 +98,7 @@ export default function Landingpage() {
               <img
                 src="b.png"
                 style={{ width: "40vw" }}
-                alt="Stay Up To Date - Get Updates from HedgCo at Whatsapp"
+                alt="Potentio run logo"
               />
               <div style={{ position: "absolute", top: "5%", height: "100%" }}>
                 <div
@@ -146,18 +146,20 @@ export default function Landingpage() {
             >
               <div>
                 <img
-                  src="imgL.png"
+                  src="https://i.imgur.com/ZgmM60k.png"
+                  style={{ height: "25vw", margin: "auto"}}
+                  alt="Potentio - Reach your max potential"
                 />
                 <p
                   style={{
                     width: "15vw",
                     marginLeft: "2.5vw",
                     marginTop: 20,
-                    fontSize: "1.7vw",
-                    fontWeight: 600,
+                    fontSize: "2vw",
+                    fontWeight: "bold",
                   }}
                 >
-                  <span style={{ color: "#00C566" }}> State-of-art </span>{" "}
+                  <span style={{ color: "#00C566" }}>State-of-art</span>{" "}
                   Leaderboard <span style={{ color: "#00C566" }}>designs</span>{" "}
                 </p>
                 <p
@@ -174,7 +176,9 @@ export default function Landingpage() {
               </div>
               <div>
                 <img
-                  src="imgC.png"
+                  src="https://i.imgur.com/1uZrjDI.png" // svg goes here
+                  style={{ height: "25vw", margin: "auto" }}
+                  alt="Opinion on Trading Buy and sell"
                 />
                 <p
                   style={{
@@ -182,13 +186,13 @@ export default function Landingpage() {
                     marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1.7vw",
-                    fontWeight: 600,
+                    fontWeight:"bolder",
                   }}
                 >
                   {" "}
-                  Variety <span style={{ color: "#A0318E" }}>
-                    of tests{" "}
-                  </span>{" "}
+                  <span style={{ color: "#4C7AA3" }}> Variety<br></br>
+                    {" "}
+                  </span>{" "}of Tests
                 </p>
                 <p
                   style={{
@@ -204,7 +208,9 @@ export default function Landingpage() {
               </div>
               <div>
                 <img
-                  src="imgT.png"
+                  src="https://i.imgur.com/p6Sponk.png"//svg goes here
+                  style={{ height: "25vw", margin: "auto" }}
+                  alt="Profit from your Opinions"
                 />
                 <p
                   style={{
@@ -212,10 +218,11 @@ export default function Landingpage() {
                     marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1.7vw",
-                    fontWeight: 600,
+                    fontWeight: "bolder",
                   }}
                 >
-                  <span style={{ color: "#4C7AA3" }}>JEE like</span> Testing UI{" "}
+                  <span style={{ color: "#4C7AA3" }}>JEE</span>-like{" "}<br></br>
+                  <span style={{ color: "#B62D8F" }}>Testing UI</span>{" "}
                 </p>
                 <p
                   style={{
@@ -262,7 +269,7 @@ export default function Landingpage() {
                   <div
                     style={{
                       left: "5vw",
-                      borderLeft: "6px solid #438FF2",
+                      borderLeft: "6px solid #407BFF",
                       marginRight: "1vw",
                       padding: 0,
                       paddingLeft: "1vw",
@@ -275,12 +282,13 @@ export default function Landingpage() {
                         fontSize: "3vw",
                         margin: 0,
                         padding: 0,
+                        marginTop: "1vw",
                       }}
                     >
-                      <span style={{ color: "#438FF2" }}> Talk </span> cannot guarantee,
-                      <br /> <span style={{ color: "#438FF2" }}>
+                      <span style={{ color: "#407BFF" }}> Talk </span> cannot guarantee,
+                      <br /> <span style={{ color: "#407BFF" }}>
                         {" "}
-                        Research
+                        Research 
                       </span>{" "}
                       can...
                     </p>
@@ -292,7 +300,7 @@ export default function Landingpage() {
                       }}
                     >
                       {" "}
-                      Check your preparation level with this tiny test .{" "}
+                      Prepare all your chapters with us. Our tests are made with state of art methodologies which <span style={{ color: "#407BFF" }}>  guarantee your growth </span> {" "}
                     </p>
                   </div>
                   <a
@@ -303,7 +311,7 @@ export default function Landingpage() {
                       style={{
                         marginLeft: "10vw",
                         marginTop: 30,
-                        background: "#438FF2",
+                        background: "#407BFF",
                         boxShadow: "10px 10px 35px #D7D7D7",
                         borderRadius: 15,
                         borderColor: "transparent",
@@ -324,10 +332,13 @@ export default function Landingpage() {
                   marginTop: 75,
                   position: "relative",
                   marginRight: "2.5vw",
+                  paddingBottom: 75
                 }}
               >
                 <img
-                  src="pot.svg"
+                  src="https://i.imgur.com/aL1vjcJ.png"
+                  style={{ width: "25vw" }}
+                  alt="Opinion on Healthcare, Elections, Finance, Startups, Banking, Crypto"
                 />
               </div>
             </div>
