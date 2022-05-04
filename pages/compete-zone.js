@@ -44,7 +44,7 @@ export default function Home() {
           id="bottom portion"
           className="flex justify-center flex-row h-2/3 w-full "
         >
-          <div>
+          <div className="mb-9">
             <p className=" flex justify-start font-nunitoEB text-2xl text-gray-700 pl-20 pb-5">
               {" "}
               Short Test
