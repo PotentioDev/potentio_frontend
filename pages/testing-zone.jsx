@@ -93,6 +93,25 @@ export default function MainTestingZone() {
     });
   }
 
+  function generate_options() {
+    const options = [];
+    for (
+      let i = 0;
+      i < data.questions[data.currentQuestion].Options.length;
+      i++
+    ) {
+      options.push(
+        <div className="text-gray-700 w-44 p-4">
+          <input type="radio" value="" name="user-answer" />
+          <span className=" ml-0.5">
+            {data.questions[data.currentQuestion].Options[i]}
+          </span>
+        </div>
+      );
+    }
+    return options;
+  }
+
   return (
     <main>
       <div
