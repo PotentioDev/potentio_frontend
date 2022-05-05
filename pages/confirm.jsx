@@ -37,9 +37,9 @@ export default function Confirm() {
               <br /> Please enter "Yes I Confirm" and click submit to confirm.
             </div>
             <input
-              type="Name"
+              type="text"
               className="flex mb-5 pl-2 pr-4 mr-1 rounded-lg w-80 placeholder-grey text-lg text  hover:shadow-lg shadow-inner  focus:outline-none  active:shadow-lg  "
-              placeholder="Name"
+              placeholder="Confirmation"
               onChange={(e) => setName(e.target.value)}
             />
             <div className="flex w-96 ml-1 -mb-4 ">
