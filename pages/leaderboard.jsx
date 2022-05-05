@@ -87,7 +87,7 @@ function Leaderboard() {
           <div id="photo" className="flex">
             <img
               className=" mt-16 ml-96 w-32 h-32 shadow-xl rounded-full"
-              src="https://via.placeholder.com/170x170"
+              src="https://i.imgur.com/XOAuRCQ.png"
             />
           </div>
           <div id="name" className="flex flex-col ">
@@ -105,7 +105,7 @@ function Leaderboard() {
         <div id="rank-1" className="flex flex-col">
           <img
             className=" -mt-4 w-44 h-44 shadow-xl rounded-full"
-            src="https://via.placeholder.com/170x170"
+            src="https://i.imgur.com/3JjvsmF.png"
           />
           <p className="flex font-nunito text-2xl font-extrabold text-center text-green-500">
             1<sup className="mt-4">st</sup>
@@ -120,7 +120,7 @@ function Leaderboard() {
         <div id="rank-1" className="flex flex-col">
           <img
             className=" mt-16 mr-96 w-32 h-32 rounded-full shadow-xl"
-            src="https://via.placeholder.com/170x170"
+            src="https://i.imgur.com/QGkVJZn.png"
           />
           <p className=" flex -ml-3 font-nunito text-xl font-extrabold text-center text-blue-500">
             2<sup className="mt-4">nd</sup>
