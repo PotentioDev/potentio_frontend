@@ -165,7 +165,7 @@ export default function CompeteZone() {
                 <div className="mx-[3em] cardPk transition duration-500 hover:scale-110 relative ">
                   <img
                     className="absolute right-0 bottom-0 "
-                    src="eliminated.png"
+                    src="Eliminated.png"
                   ></img>
                   <div className="absolute top-20 left-3">
                     <p className="font-nunitoEB text-2xl text-white text-right ">

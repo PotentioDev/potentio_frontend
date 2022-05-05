@@ -160,27 +160,23 @@ export default function LandingPage() {
                 />
                 <p
                   style={{
-                    width: "15vw",
-                    marginLeft: "2.5vw",
                     marginTop: 20,
-                    fontSize: "2vw",
+                    fontSize: "1.6vw",
                     fontWeight: "bold",
                   }}
                 >
-                  <span style={{ color: "#00C566" }}>State-of-art</span>{" "}
-                  Leaderboard <span style={{ color: "#00C566" }}>designs</span>{" "}
+                  <div style={{ color: "#00C566" }}>State-of-art</div>{" "}
+                  Leaderboard <div style={{ color: "#00C566" }}></div>{" "}
                 </p>
                 <p
                   style={{
-                    width: "15vw",
-                    marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1vw",
                   }}
                 >
                   {" "}
-                  These leaderboards just motivate you to go ahead without
-                  stress!{" "}
+                  These Leaderboards are designed to help you reach your maximum
+                  potential.{" "}
                 </p>
               </div>
               <div>
@@ -191,8 +187,6 @@ export default function LandingPage() {
                 />
                 <p
                   style={{
-                    width: "15vw",
-                    marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1.7vw",
                     fontWeight: "bolder",
@@ -207,8 +201,6 @@ export default function LandingPage() {
                 </p>
                 <p
                   style={{
-                    width: "15vw",
-                    marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1vw",
                   }}
@@ -217,7 +209,7 @@ export default function LandingPage() {
                   Tests for every level of preparation so that you always grow!{" "}
                 </p>
               </div>
-              <div>
+              <div className="">
                 <img
                   src="https://i.imgur.com/p6Sponk.png" //svg goes here
                   style={{ height: "25vw", margin: "auto" }}
@@ -225,8 +217,6 @@ export default function LandingPage() {
                 />
                 <p
                   style={{
-                    width: "15vw",
-                    marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1.7vw",
                     fontWeight: "bolder",
@@ -237,10 +227,9 @@ export default function LandingPage() {
                 </p>
                 <p
                   style={{
-                    width: "15vw",
-                    marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1vw",
+                    textAlign: "center",
                   }}
                 >
                   {" "}
