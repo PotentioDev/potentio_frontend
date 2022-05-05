@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Header from "../components/Header";
 
-export default function Home() {
+export default function CompeteZone() {
   return (
     <main>
       <Header />

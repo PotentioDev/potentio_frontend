@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Header from "../components/Header";
 import Laptop1 from "../public/assets/svg/laptop1.svg";
 import Symbols from "../public/assets/svg/symbols.svg";
-export default function Landingpage() {
+export default function LandingPage() {
   return (
     <lol>
       <Header />
@@ -47,7 +48,8 @@ export default function Landingpage() {
                       lineHeight: 1,
                       fontWeight: "bold",
                       fontSize: "5vw",
-                      color: "linear-gradient(-63deg, rgba(66, 125.84, 242, 1), rgba(66, 188.50, 241, 1))",
+                      color:
+                        "linear-gradient(-63deg, rgba(66, 125.84, 242, 1), rgba(66, 188.50, 241, 1))",
                       margin: 0,
                     }}
                   >
@@ -64,15 +66,13 @@ export default function Landingpage() {
                     Check your preparation level with this tiny test.
                   </p>
                 </div>
-                <a
-                  href="/compete-zone"
-                  style={{ textDecoration: "none" }}
-                >
+                <a href="/compete-zone" style={{ textDecoration: "none" }}>
                   <button
                     style={{
                       marginLeft: "10vw",
                       marginTop: 30,
-                      backgroundImage: "linear-gradient(-63deg, rgba(66, 125.84, 242, 1), rgba(66, 188.50, 241, 1))",
+                      backgroundImage:
+                        "linear-gradient(-63deg, rgba(66, 125.84, 242, 1), rgba(66, 188.50, 241, 1))",
                       boxShadow: "2px 46px 35px -48px rgba(66, 128, 242, 1)",
                       borderRadius: 15,
                       borderColor: "transparent",
@@ -131,9 +131,17 @@ export default function Landingpage() {
                 marginTop: 20,
               }}
             >
-              <div style={{ margin: "1vw", color: "black", fontWeight: "bold" }}>Welcome</div>
+              <div
+                style={{ margin: "1vw", color: "black", fontWeight: "bold" }}
+              >
+                Welcome
+              </div>
               <div style={{ fontWeight: "bold" }}>to</div>
-              <div style={{ margin: "1vw", color: "#00C566", fontWeight: "bold"}}>Growth</div>
+              <div
+                style={{ margin: "1vw", color: "#00C566", fontWeight: "bold" }}
+              >
+                Growth
+              </div>
             </div>
             <div
               style={{
@@ -147,7 +155,7 @@ export default function Landingpage() {
               <div>
                 <img
                   src="https://i.imgur.com/ZgmM60k.png"
-                  style={{ height: "25vw", margin: "auto"}}
+                  style={{ height: "25vw", margin: "auto" }}
                   alt="Potentio - Reach your max potential"
                 />
                 <p
@@ -171,7 +179,8 @@ export default function Landingpage() {
                   }}
                 >
                   {" "}
-                  These leaderboards just motivate you to go ahead without stress!{" "}
+                  These leaderboards just motivate you to go ahead without
+                  stress!{" "}
                 </p>
               </div>
               <div>
@@ -186,13 +195,15 @@ export default function Landingpage() {
                     marginLeft: "2.5vw",
                     marginTop: 20,
                     fontSize: "1.7vw",
-                    fontWeight:"bolder",
+                    fontWeight: "bolder",
                   }}
                 >
                   {" "}
-                  <span style={{ color: "#4C7AA3" }}> Variety<br></br>
+                  <span style={{ color: "#4C7AA3" }}>
                     {" "}
-                  </span>{" "}of Tests
+                    Variety<br></br>{" "}
+                  </span>{" "}
+                  of Tests
                 </p>
                 <p
                   style={{
@@ -208,7 +219,7 @@ export default function Landingpage() {
               </div>
               <div>
                 <img
-                  src="https://i.imgur.com/p6Sponk.png"//svg goes here
+                  src="https://i.imgur.com/p6Sponk.png" //svg goes here
                   style={{ height: "25vw", margin: "auto" }}
                   alt="Profit from your Opinions"
                 />
@@ -221,7 +232,7 @@ export default function Landingpage() {
                     fontWeight: "bolder",
                   }}
                 >
-                  <span style={{ color: "#4C7AA3" }}>JEE</span>-like{" "}<br></br>
+                  <span style={{ color: "#4C7AA3" }}>JEE</span>-like <br></br>
                   <span style={{ color: "#B62D8F" }}>Testing UI</span>{" "}
                 </p>
                 <p
@@ -233,7 +244,8 @@ export default function Landingpage() {
                   }}
                 >
                   {" "}
-                  So that you are familiar with real JEE testing from the beginning of your journey!{" "}
+                  So that you are familiar with real JEE testing from the
+                  beginning of your journey!{" "}
                 </p>
               </div>
             </div>
@@ -285,10 +297,11 @@ export default function Landingpage() {
                         marginTop: "1vw",
                       }}
                     >
-                      <span style={{ color: "#407BFF" }}> Talk </span> cannot guarantee,
+                      <span style={{ color: "#407BFF" }}> Talk </span> cannot
+                      guarantee,
                       <br /> <span style={{ color: "#407BFF" }}>
                         {" "}
-                        Research 
+                        Research
                       </span>{" "}
                       can...
                     </p>
@@ -300,13 +313,15 @@ export default function Landingpage() {
                       }}
                     >
                       {" "}
-                      Prepare all your chapters with us. Our tests are made with state of art methodologies which <span style={{ color: "#407BFF" }}>  guarantee your growth </span> {" "}
+                      Prepare all your chapters with us. Our tests are made with
+                      state of art methodologies which{" "}
+                      <span style={{ color: "#407BFF" }}>
+                        {" "}
+                        guarantee your growth{" "}
+                      </span>{" "}
                     </p>
                   </div>
-                  <a
-                    href="compete-zone"
-                    style={{ textDecoration: "none" }}
-                  >
+                  <a href="compete-zone" style={{ textDecoration: "none" }}>
                     <button
                       style={{
                         marginLeft: "10vw",
@@ -332,7 +347,7 @@ export default function Landingpage() {
                   marginTop: 75,
                   position: "relative",
                   marginRight: "2.5vw",
-                  paddingBottom: 75
+                  paddingBottom: 75,
                 }}
               >
                 <img
