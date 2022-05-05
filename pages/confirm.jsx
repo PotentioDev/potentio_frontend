@@ -24,18 +24,18 @@ export default function Confirm() {
         className="flex justify-center w-full h-full  bg-[#F8FAFA] "
       >
         <section className="flex flex-col w-2/3 justify-items-center bg-white ">
-          <div className="flex flex-col self-center mt-40">
+          <div className="flex flex-col self-center mt-20 justify-center">
             <div
               id="Potentio-logo"
-              className="flex font-comfortaa bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-5xl ml-16 mb-10 "
+              className="flex font-comfortaa bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-6xl ml-16 mb-10 "
             >
               Potentio
             </div>
-            <div className="flex w-96 ml-1 mb-3">
+            <div className="flex w-96 ml-1 mb-3 text-center">
               The following window shows a declaration that no plagiarism will
               be done and that the test will be given with complete honesty.
-              <br /> Please enter &quot; Yes I Confirm &quot; and click submit
-              to confirm.
+              <br /> <br /> Please enter &quot; Yes I Confirm &quot; and click
+              submit to confirm.
             </div>
             <input
               type="text"
@@ -43,10 +43,11 @@ export default function Confirm() {
               placeholder="Confirmation"
               onChange={(e) => setName(e.target.value)}
             />
-            <div className="flex w-96 ml-1 -mb-4 ">
-              The following window shows a declaration that no plagiarism will
-              be done and that the test will be given with complete honesty.
-              <br /> Please enter your name and click submit to confirm.
+            <br />
+            <div className="text-center">
+              I hereby accept that the information given by me
+              <br />
+              is true to my uttermost knowledge and belief.
             </div>
             <ul className="grid grid-cols-3 gap-x-5 ml-24 m-10 max-w-md mx-auto">
               <li className="relative">
