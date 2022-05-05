@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import {Profiles} from "../data"
+import { Profiles } from "../data";
 function Leaderboard() {
   const [data, setData] = useState({
     profiles: Profiles,
@@ -8,35 +8,32 @@ function Leaderboard() {
   useEffect(() => {
     if (localStorage.getItem("result")) {
       let result = JSON.parse(localStorage.getItem("result"));
-      result['user'] = true;
+      result["user"] = true;
       setData({
         ...data,
         profiles: [...data.profiles, result],
       });
     }
-  }, [])
-  console.log(data)
+  }, []);
+  console.log(data);
 
   // Sort profiles by score
   const sortedProfiles = data.profiles.sort((a, b) => {
     return b.total - a.total;
-
-  }
-  );
+  });
   let me = null;
   for (let i = 0; i < sortedProfiles.length; i++)
     if (sortedProfiles[i].user) me = i;
   function generateLeaderboard() {
     const leaderboard = [];
     for (let i = 0; i < data.profiles.length; i++) {
-      if (data.profiles[i].user)
-        continue
+      if (data.profiles[i].user) continue;
       leaderboard.push(
-                  <div
+        <div
           id="rank-1"
           className="flex w-full h-20 pt-3 pb-3 pl-12 pr-12 justify-between items-center"
         >
-                    {i + 1}
+          {i + 1}
           <div
             id="rank-container1"
             className="flex w-full flex-around ml-3 mr-6 items-center pt-4 pb-4 h-full  bg-gradient-to-tl from-blue-500 to-blue-400 shadow rounded-2xl"
@@ -49,33 +46,40 @@ function Leaderboard() {
             </div>
             <div className="flex-col text-white pl-12 pr-12  font-nunito">
               <p className=" text-sm flex">Total : </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[i].total}</p>
+              <p className="flex text-base font-semibold">
+                {sortedProfiles[i].total}
+              </p>
             </div>
             <div className="flex-col text-white pl-12 pr-12 font-nunito">
               <p className=" text-sm flex">Physics: </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[i].Physics}</p>
+              <p className="flex text-base font-semibold">
+                {sortedProfiles[i].Physics}
+              </p>
             </div>
             <div className="flex-col text-white pl-12 pr-12 font-nunito">
               <p className=" text-sm flex">Chemistry: </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[i].Chemistry}</p>
+              <p className="flex text-base font-semibold">
+                {sortedProfiles[i].Chemistry}
+              </p>
             </div>
             <div className="flex-col text-white pl-12 pr-12 font-nunito">
               <p className=" text-sm flex">Maths: </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[i].Maths}</p>
+              <p className="flex text-base font-semibold">
+                {sortedProfiles[i].Maths}
+              </p>
             </div>
             <div className="flex-col text-white pl-12 pr-12 font-nunito">
               <p className=" text-sm flex">Percentile: </p>{" "}
               <p className="flex text-base font-semibold tracking-wider">
-                {sortedProfiles[i].total*100/45}
+                {parseInt((sortedProfiles[i].total * 100) / 45)}
               </p>
             </div>
           </div>
         </div>
-      )
+      );
     }
 
     return leaderboard;
-
   }
   return (
     <main>
@@ -135,46 +139,55 @@ function Leaderboard() {
         </div>
       </div>
       <div id="rank-list" className=" h-2/3 w-full ">
-        {me!==null&&(<div
+        {me !== null && (
+          <div
             id="curr-user-rank"
             className="flex mb-12 mt-12 w-full h-20 pt-3 pb-3 pl-12 pr-12 justify-between items-center"
-        >
-          {me + 1}
-          <div
+          >
+            {me + 1}
+            <div
               id="curr-user-rank-container"
               className="flex w-full flex-around ml-3 mr-6 items-center pt-4 pb-4 h-full  bg-gradient-to-tl  from-green-700 to-green-300 shadow rounded-2xl"
-          >
-            <div
+            >
+              <div
                 id="name"
                 className="flex text-white pl-24 pr-12 text-lg font tracking-wider font-semibold font-nunito"
-            >
-              {sortedProfiles[me].name}
-            </div>
-            <div className="flex-col text-white pl-12 pr-12  font-nunito">
-              <p className=" text-sm flex">Total : </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[me].total}</p>
-            </div>
-            <div className="flex-col text-white pl-12 pr-12 font-nunito">
-              <p className=" text-sm flex">Physics: </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[me].Physics}</p>
-            </div>
-            <div className="flex-col text-white pl-12 pr-12 font-nunito">
-              <p className=" text-sm flex">Chemistry: </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[me].Chemistry}</p>
-            </div>
-            <div className="flex-col text-white pl-12 pr-12 font-nunito">
-              <p className=" text-sm flex">Maths: </p>{" "}
-              <p className="flex text-base font-semibold">{sortedProfiles[me].Maths}</p>
-            </div>
-            <div className="flex-col text-white pl-12 pr-12 font-nunito">
-              <p className=" text-sm flex">Percentile: </p>{" "}
-              <p className="flex text-base font-semibold tracking-wider">
-                {sortedProfiles[me].total*100/45}
-              </p>
+              >
+                {sortedProfiles[me].name}
+              </div>
+              <div className="flex-col text-white pl-12 pr-12  font-nunito">
+                <p className=" text-sm flex">Total : </p>{" "}
+                <p className="flex text-base font-semibold">
+                  {sortedProfiles[me].total}
+                </p>
+              </div>
+              <div className="flex-col text-white pl-12 pr-12 font-nunito">
+                <p className=" text-sm flex">Physics: </p>{" "}
+                <p className="flex text-base font-semibold">
+                  {sortedProfiles[me].Physics}
+                </p>
+              </div>
+              <div className="flex-col text-white pl-12 pr-12 font-nunito">
+                <p className=" text-sm flex">Chemistry: </p>{" "}
+                <p className="flex text-base font-semibold">
+                  {sortedProfiles[me].Chemistry}
+                </p>
+              </div>
+              <div className="flex-col text-white pl-12 pr-12 font-nunito">
+                <p className=" text-sm flex">Maths: </p>{" "}
+                <p className="flex text-base font-semibold">
+                  {sortedProfiles[me].Maths}
+                </p>
+              </div>
+              <div className="flex-col text-white pl-12 pr-12 font-nunito">
+                <p className=" text-sm flex">Percentile: </p>{" "}
+                <p className="flex text-base font-semibold tracking-wider">
+                  {(sortedProfiles[me].total * 100) / 45}
+                </p>
+              </div>
             </div>
           </div>
-        </div>)
-          }
+        )}
         {generateLeaderboard()}
       </div>
     </main>

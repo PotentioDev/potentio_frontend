@@ -1,8 +1,16 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 
-function mainpage() {
+function Mainpage() {
+  const [data, setData] = React.useState(null);
+
+  useEffect(() => {
+    console.log(JSON.parse(localStorage.getItem("result")));
+    setData(JSON.parse(localStorage.getItem("result")));
+  }, []);
+
+  console.log(data);
   return (
     <main>
       <Header />
@@ -57,6 +65,9 @@ function mainpage() {
               <div id="percentile">
                 <b>Percentile:</b> 0000{" "}
               </div>
+              <div id="marks">
+                <b>Marks:</b> {data?.total}
+              </div>
               <div id="rank">
                 <b>Rank:</b> 0000
               </div>
@@ -78,13 +89,14 @@ function mainpage() {
                 <b>Marks</b>
               </div>
               <div id="subject-1">
-                <b>Subject 1:</b> 000{" "}
+                <b>Physics:</b> {data?.Physics}
               </div>
               <div id="subject-2">
-                <b>Subject 2:</b> 000
+                <b>Chemistry:</b>
+                {data?.Chemistry}
               </div>
               <div id="subject-3">
-                <b>Subject 3:</b> 000
+                <b>Maths:</b> {data?.Maths}
               </div>
             </div>
           </div>
@@ -103,14 +115,14 @@ function mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-sky-600 to-sky-400 drop-shadow"
             >
               <div id="marks" className="pb-2">
-                Marks{" "}
+                Marks {data?.total}
               </div>
               <div
                 id="line"
                 className="border-t-4 border-white border-solid w-2/6 ml-20 pb-2 rounded-t-md rounded-b-3xl"
               ></div>
               <div id="total">
-                <b>Total</b>
+                <b>Total 45</b>
               </div>
             </div>
           </div>
@@ -129,9 +141,9 @@ function mainpage() {
               >
                 <b>Top Weak Subjects</b>
               </div>
-              <div id="subject-1">Subject 1</div>
-              <div id="subject-2">Subject 2</div>
-              <div id="subject-3">Subject 3</div>
+              <div id="subject-1">Maths</div>
+              <div id="subject-2">Physics</div>
+              <div id="subject-3">Chemistry</div>
             </div>
           </div>
         </div>
@@ -151,7 +163,7 @@ function mainpage() {
           </div>
         </div> */}
 
-          {/* <div
+        {/* <div
             id="graph-analysis-bar"
             className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   "
           >
@@ -170,4 +182,4 @@ function mainpage() {
   );
 }
 
-export default mainpage;
+export default Mainpage;

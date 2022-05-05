@@ -83,7 +83,7 @@ export const Chemistry_Question = [
   {
     Question_Text: "What is the atomic number of Hydrogen?",
     Options: ["1", "2", "3", "4"],
-    Answer: "1",
+    Answer: 1,
     Tags: ["Chemistry", "Atomic Number"],
     Level: 0,
     Image: "",
@@ -92,7 +92,7 @@ export const Chemistry_Question = [
     Question_Text:
       "What will be the order of acidity of the following compounds?",
     Options: ["1", "2", "3", "4"],
-    Answer: "1",
+    Answer: 1,
     Tags: ["Chemistry", "Organic Chemistry"],
     Level: 1,
     Image: "https://i.imgur.com/362Q5jg.png",
@@ -317,8 +317,6 @@ export const All_Questions = Chemistry_Question.concat(
   Maths_Question
 );
 
-
-
 export const Profiles = [
   {
     name: "Gursimram Kapoor",
@@ -333,8 +331,7 @@ export const Profiles = [
     Physics: 15,
     Maths: 0,
     Chemistry: 12,
-  }
-  ,
+  },
   {
     name: "John Doe",
     total: 24,
