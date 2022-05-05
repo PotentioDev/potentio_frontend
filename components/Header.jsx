@@ -18,9 +18,7 @@ export default function Header() {
       </Link>
       <ul id="Otions" className="flex space-x-10 list-none px-8">
         {[
-          ["Compete", "compete-zone"],
-          ["Membership", ""],
-          ["Gym", ""],
+          ["Compete", "competeZone"],
           ["Dashboard", ""],
         ].map(([title, link]) => (
           <Link href={link} passHref>

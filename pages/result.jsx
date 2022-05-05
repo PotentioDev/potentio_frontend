@@ -11,7 +11,7 @@ function mainpage() {
           id="nav-buttons"
           className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   select-none"
         >
-          <Link href="/compete-zone" passHref>
+          <Link href="/competeZone" passHref>
             <div
               id="back-to-home"
               className="bg-gradient-to-r from-purple-500 to-purple-800 hover:from-purple-500 hover:to-purple-500 active:from-purple-500 active:to-purple-800 w-1/3 h-12 ml-16 mr-16 rounded-2xl cursor-pointer pt-1.5 pb-2 pl-1.5 pr-1.5 text-center text-base tracking-wide inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 hover:bg-red-800 active focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-violet-400 transition duration-180 ease-in-out "
@@ -19,7 +19,7 @@ function mainpage() {
             >
               <p
                 className="font-sans font-bold text-white inline-block"
-                href="/compete-zone"
+                href="/competeZone"
               >
                 Back to Home
               </p>

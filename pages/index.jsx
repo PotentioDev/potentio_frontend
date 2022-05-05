@@ -66,7 +66,7 @@ export default function LandingPage() {
                     Check your preparation level with this tiny test.
                   </p>
                 </div>
-                <a href="/compete-zone" style={{ textDecoration: "none" }}>
+                <a href="/competeZone" style={{ textDecoration: "none" }}>
                   <button
                     style={{
                       marginLeft: "10vw",
@@ -321,7 +321,7 @@ export default function LandingPage() {
                       </span>{" "}
                     </p>
                   </div>
-                  <a href="compete-zone" style={{ textDecoration: "none" }}>
+                  <a href="competeZone" style={{ textDecoration: "none" }}>
                     <button
                       style={{
                         marginLeft: "10vw",
