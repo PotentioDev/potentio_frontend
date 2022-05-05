@@ -22,7 +22,7 @@ export default function MainTestingZone() {
         }
         return value;
       }),
-    });
+    })
   }, [data.currentQuestion]);
 
   const {
@@ -66,44 +66,33 @@ export default function MainTestingZone() {
           onClick={() => {
             setData({ ...data, currentQuestion: i });
           }}
-          className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
-          style={{
-            "background-color":
-              data.visited_questions[i] === false
-                ? "white"
-                : data.marked_for_review[i] === true
-                ? "#7e54bb"
-                : data.filled_responses[i] !== -1
-                ? "#34d26a"
-                : "#d23434",
-            color: data.visited_questions[i] === true ? "white" : "black",
-          }}
-        >
-          <p className="inline-block mt-0.5">{i + 1}</p>
-        </button>
-      );
+        className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
+        style={{"background-color": data.visited_questions[i]===false?"white":(data.marked_for_review[i]===true?"#7e54bb":(data.filled_responses[i]!==-1?"#34d26a":"#d23434")), "color": data.visited_questions[i]===true?"white":"black"}}>
+      <p className="inline-block mt-0.5">{i+1}</p>
+    </button>);
     }
 
     return questions;
   }
-  function generate_options() {
-    const options = [];
-    for (
-      let i = 0;
-      i < data.questions[data.currentQuestion].Options.length;
-      i++
-    ) {
-      options.push(
-        <div className="text-gray-700 w-44 p-4">
-          <input type="radio" value="" name="user-answer" />
-          <span className=" ml-0.5">
-            {data.questions[data.currentQuestion].Options[i]}
-          </span>
-        </div>
-      );
-    }
-    return options;
+  return options;
+}
+
+  function save() {
+    console.log("save called")
   }
+
+  function markForReview() {
+    setData({
+      ...data,
+      marked_for_review: data.marked_for_review.map((value, index) => {
+        if (index === data.currentQuestion) {
+          return !value;
+        }
+        return value;
+      }),
+    });
+  }
+
   return (
     <main>
       <div
@@ -125,7 +114,11 @@ export default function MainTestingZone() {
             <div id="question" className="w-auto h-64">
               {data.questions[data.currentQuestion].Question_Text}
               {data.questions[data.currentQuestion].Image ? (
-                <img src={data.questions[data.currentQuestion].Image} />
+                <img
+                  src={data.questions[data.currentQuestion].Image}
+                  height="50"
+                  width="100"
+                />
               ) : (
                 ""
               )}
@@ -147,7 +140,10 @@ export default function MainTestingZone() {
                 id="Save_and_next"
                 className="bg-green-600 pt-1.5 pb-2 h-10 w-28 pl-1.5 pr-1.5 text-center text-base tracking-wide rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out "
                 type="button"
-                onClick={next}
+                onClick={() => {
+                  save();
+                  next();
+                }}
               >
                 <p className="font-sans font-bold text-white inline-block">
                   Save & Next
@@ -192,6 +188,10 @@ export default function MainTestingZone() {
                 id="save_and_mark_for_review"
                 className=" bg-amber-500 pt-1.5 pb-1.5 h-10 w-52 text-center tracking-wide text-white text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-amber-600 transition duration-150 ease-in-out "
                 type="button"
+                onClick={() => {
+                  save();
+                  markForReview();
+                }}
               >
                 <p className="font-sans font-bold text-white inline-block">
                   Save & mark for Review
@@ -215,7 +215,10 @@ export default function MainTestingZone() {
                   id="Save_and_next"
                   className="bg-green-600 ml-72 h-10 mb-11 pt-2 pb-5 pl-2.5 pr-2.5 w-32 text-center tracking-wide text-base rounded-xl inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out"
                   type="button"
-                  onClick={next}
+                  onClick={() => {
+                    save();
+                    next();
+                  }}
                 >
                   <p className=" font-sans font-bold text-white inline-block">
                     Submit
