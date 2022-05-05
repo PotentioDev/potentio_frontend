@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
+import BarGraph from "../components/BarGraph";
 import Header from "../components/Header";
 import {Profiles} from "../data";
 
@@ -133,6 +134,7 @@ function Mainpage() {
               <div id="subject-3">
                 <b>Maths:</b> {sortedProfiles[me].Maths}
               </div>
+
             </div>
           </div>
         </div>
@@ -154,7 +156,7 @@ function Mainpage() {
               </div>
               <div
                 id="line"
-                className="border-t-4 border-white border-solid w-2/6 ml-20 pb-2 rounded-t-md rounded-b-3xl"
+                className="border-t-4 border-white border-solid w-2/6 ml-24 pb-2 rounded-t-md rounded-b-3xl"
               ></div>
               <div id="total">
                 <b>Total 45</b>
@@ -213,6 +215,13 @@ function Mainpage() {
             </div>
           </div> */}
       </div>
+      <div className="flex">
+        <div className="m-auto mt-16">
+                    <BarGraph
+                p={sortedProfiles[me].Physics}
+                c={sortedProfiles[me].Chemistry}
+                m={sortedProfiles[me].Maths}
+                /></div></div>
     </main>
   );
 }

@@ -49,15 +49,15 @@ export default function MainTestingZone() {
       }
     }
 
-    const p_score = score / 2;
-    const c_score = score / 3;
+    const p_score = Math.round(score / 2);
+    const c_score = Math.round(score / 3);
     const m_score = score - p_score - c_score;
     const profile = {
       name: "Mohit Gupta",
-      total: score.toFixed(2),
-      Physics: p_score.toFixed(2),
-      Maths: m_score.toFixed(2),
-      Chemistry: c_score.toFixed(2),
+      total: score.toFixed(0),
+      Physics: p_score.toFixed(0),
+      Maths: m_score.toFixed(0),
+      Chemistry: c_score.toFixed(0),
     };
     localStorage.setItem("result", JSON.stringify(profile));
     // window.location.href = "/result";
