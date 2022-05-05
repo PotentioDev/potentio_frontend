@@ -11,7 +11,7 @@ function mainpage() {
           id="nav-buttons"
           className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   select-none"
         >
-          <Link href="/competeZone" passHref>
+          <Link href="/" passHref>
             <div
               id="back-to-home"
               className="bg-gradient-to-r from-purple-500 to-purple-800 hover:from-purple-500 hover:to-purple-500 active:from-purple-500 active:to-purple-800 w-1/3 h-12 ml-16 mr-16 rounded-2xl cursor-pointer pt-1.5 pb-2 pl-1.5 pr-1.5 text-center text-base tracking-wide inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 hover:bg-red-800 active focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-violet-400 transition duration-180 ease-in-out "
@@ -136,7 +136,7 @@ function mainpage() {
           </div>
         </div>
 
-        <div
+        {/* <div
           id="graph-analysis-points"
           className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   "
         >
@@ -149,22 +149,22 @@ function mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600  drop-shadow"
             ></div>
           </div>
-        </div>
+        </div> */}
 
-        <div
-          id="graph-analysis-bar"
-          className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   "
-        >
-          <div
-            id="graph-container2"
-            className="flex justify-center w-full ml-3 mr-6 rounded-2xl items-center pt-4 pb-4 h-full  bg-gradient-to-r from-fuchsia-600 to-fuchsia-400"
+          {/* <div
+            id="graph-analysis-bar"
+            className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   "
           >
             <div
-              id="graph-bar"
-              className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600   drop-shadow"
-            ></div>
-          </div>
-        </div>
+              id="graph-container2"
+              className="flex justify-center w-full ml-3 mr-6 rounded-2xl items-center pt-4 pb-4 h-full  bg-gradient-to-r from-fuchsia-600 to-fuchsia-400"
+            >
+              <div
+                id="graph-bar"
+                className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600   drop-shadow"
+              ></div>
+            </div>
+          </div> */}
       </div>
     </main>
   );
