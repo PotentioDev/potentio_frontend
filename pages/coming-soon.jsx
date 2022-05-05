@@ -11,7 +11,7 @@ export default function Home() {
           <div className="flex flex-col self-center mt-40">
               <div
                 id="Potentio-logo"
-                className="flex flex-col font-comfortaa  "
+                className="flex flex-col font-comfortaa"
               >
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-5xl ml-12">Coming Soon</div> <div className=" mt-3 text-md text-grey-700 pb-60">We are working hard to get this page ready for you</div>
               </div>
