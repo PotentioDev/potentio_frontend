@@ -1,11 +1,15 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Laptop1 from "../public/assets/svg/laptop1.svg";
 import Symbols from "../public/assets/svg/symbols.svg";
 export default function LandingPage() {
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
+
   return (
     <lol>
       <Header />
