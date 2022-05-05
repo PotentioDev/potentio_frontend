@@ -53,7 +53,7 @@ export default function MainTestingZone() {
     const c_score = score / 3;
     const m_score = score - p_score - c_score;
     const profile = {
-      name: "Geetansh Mishra",
+      name: "Mohit Gupta",
       total: score.toFixed(2),
       Physics: p_score.toFixed(2),
       Maths: m_score.toFixed(2),
@@ -235,7 +235,7 @@ export default function MainTestingZone() {
             <div id="question" className="w-auto">
               {data.questions[data.currentQuestion].Question_Text}
               {data.questions[data.currentQuestion].Image ? (
-                <img src={data.questions[data.currentQuestion].Image}/>
+                <img src={data.questions[data.currentQuestion].Image} />
               ) : (
                 ""
               )}
