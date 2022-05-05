@@ -44,7 +44,7 @@ export default function MainTestingZone() {
         data.questions[i].Answer,
         " is herer"
       );
-      if (data.filled_responses[i] === data.questions[i].Answer) {
+      if (data.filled_responses[i] === 1) {
         score += 5;
       }
     }
