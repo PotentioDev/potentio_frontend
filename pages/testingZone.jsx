@@ -581,75 +581,31 @@ export default function MainTestingZone() {
             </div>
 
             <div id="done-review" className="flex h-20 w-44">
-              <div id="done-review-icon" className="flex h-16 w-20">
-                <svg fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g filter="url(#a)">
-                    <rect
-                      x="11.799"
-                      y="11"
-                      width="52"
-                      height="52"
-                      rx="26"
-                      fill="#7E54BB"
-                    />
-                  </g>
-                  <rect
-                    x="44.799"
-                    y="42"
-                    width="21"
-                    height="21"
-                    rx="10.5"
-                    fill="#34D26A"
-                  />
-                  <path
-                    d="M35.482 42c-.48 0-.72-.235-.72-.704 0-.459.24-.688.72-.688h1.952v-7.984l-1.504.96c-.203.128-.395.165-.576.112a.771.771 0 0 1-.4-.336.773.773 0 0 1-.08-.512c.043-.192.165-.352.368-.48l2.208-1.392c.181-.107.352-.192.512-.256.17-.075.33-.112.48-.112a.64.64 0 0 1 .448.16c.128.107.192.272.192.496v9.344h1.792c.49 0 .736.23.736.688 0 .47-.245.704-.736.704h-5.392Z"
-                    fill="#fff"
-                  />
-                  <defs>
-                    <filter
-                      id="a"
-                      x=".799"
-                      y="0"
-                      width="82"
-                      height="82"
-                      filterUnits="userSpaceOnUse"
-                      colorInterpolationFilters="sRGB"
-                    >
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dx="4" dy="4" />
-                      <feGaussianBlur stdDeviation="7.5" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix values="0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0.35 0" />
-                      <feBlend
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_977_150"
-                      />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dx="2" dy="4" />
-                      <feGaussianBlur stdDeviation="2" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix values="0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0.25 0" />
-                      <feBlend
-                        in2="effect1_dropShadow_977_150"
-                        result="effect2_dropShadow_977_150"
-                      />
-                      <feBlend
-                        in="SourceGraphic"
-                        in2="effect2_dropShadow_977_150"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
+              <div id="done-review-icon" className="flex h-16 w-20 drop-shadow">
+      <svg width="83" height="82" viewBox="0 0 83 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dd_1244_2272)">
+<rect x="11.7988" y="11" width="52" height="52" rx="26" fill="#F5F5F5"/>
+</g>
+<path d="M35.482 42C35.002 42 34.762 41.7653 34.762 41.296C34.762 40.8373 35.002 40.608 35.482 40.608H37.434V32.624L35.93 33.584C35.7273 33.712 35.5353 33.7493 35.354 33.696C35.1833 33.632 35.05 33.52 34.954 33.36C34.8686 33.2 34.842 33.0293 34.874 32.848C34.9166 32.656 35.0393 32.496 35.242 32.368L37.45 30.976C37.6313 30.8693 37.802 30.784 37.962 30.72C38.1326 30.6453 38.2926 30.608 38.442 30.608C38.6233 30.608 38.7726 30.6613 38.89 30.768C39.018 30.8747 39.082 31.04 39.082 31.264V40.608H40.874C41.3646 40.608 41.61 40.8373 41.61 41.296C41.61 41.7653 41.3646 42 40.874 42H35.482Z" fill="black"/>
+<defs>
+<filter id="filter0_dd_1244_2272" x="0.798828" y="0" width="82" height="82" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="4"/>
+<feGaussianBlur stdDeviation="7.5"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1244_2272"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="2" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_1244_2272" result="effect2_dropShadow_1244_2272"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1244_2272" result="shape"/>
+</filter>
+</defs>
+</svg>
               </div>
               <p className="flex flex-wrap w-40 font-nunito font-semibold pt-5 -ml-3">
                 Done and Marked for Review

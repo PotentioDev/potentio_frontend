@@ -34,7 +34,7 @@ export default function Confirm() {
             <div className="flex w-96 ml-1 mb-3 text-center">
               The following window shows a declaration that no plagiarism will
               be done and that the test will be given with complete honesty.
-              <br /> <br /> Please enter &quot; Yes I Confirm &quot; and click
+              <br /> <br /> Please enter &quot;Yes I confirm&quot; and click
               submit to confirm.
             </div>
             <input
