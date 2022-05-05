@@ -1,6 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import BarGraph from "../components/BarGraph";
 import Header from "../components/Header";
 
@@ -9,8 +9,9 @@ function Mainpage() {
     profiles: [],
   });
   useEffect(() => {
-    axios.get("https://potentio-backend.herokuapp.com/api/results/get").then(
-      (res) => {
+    axios
+      .get("https://potentio-backend.herokuapp.com/api/results/get")
+      .then((res) => {
         const toFill = [];
         res.data.forEach((profile) => {
           toFill.push({
@@ -18,20 +19,23 @@ function Mainpage() {
             Physics: profile.physics_marks,
             Chemistry: profile.chemistry_marks,
             Maths: profile.maths_marks,
-            total: profile.maths_marks + profile.chemistry_marks + profile.physics_marks,
+            total:
+              profile.maths_marks +
+              profile.chemistry_marks +
+              profile.physics_marks,
           });
         });
-            if (localStorage.getItem("result")) {
-      let result = JSON.parse(localStorage.getItem("result"));
-      result["user"] = true;
-      setData({
-        ...data,
-        profiles: [...data.profiles, ...toFill, result],
+        if (localStorage?.getItem("result")) {
+          let result = JSON.parse(localStorage?.getItem("result"));
+          result["user"] = true;
+          setData({
+            ...data,
+            profiles: [...data.profiles, ...toFill, result],
+          });
+        } else {
+          setData({ profiles: [...data.profiles, ...toFill] });
+        }
       });
-    } else {
-        setData({profiles: [...data.profiles, ...toFill]});
-      }}
-    )
   }, []);
   console.log(data);
 
@@ -46,22 +50,24 @@ function Mainpage() {
   for (let i = 0; i < sortedProfiles.length; i++)
     if (sortedProfiles[i].user) me = i;
 
-
   // useEffect(() => {
-  //   console.log(JSON.parse(localStorage.getItem("result")));
-  //   setData(JSON.parse(localStorage.getItem("result")));
+  //   console.log(JSON.parse(localStorage?.getItem("result")));
+  //   setData(JSON.parse(localStorage?.getItem("result")));
   // }, []);
 
   console.log(data);
-  if (me===null)
-    return <div>Loading...</div>
+  if (me === null) return <div>Loading...</div>;
 
-  const subjectSort = [["Physics", sortedProfiles[me].Physics],
+  const subjectSort = [
+    ["Physics", sortedProfiles[me].Physics],
     ["Chemistry", sortedProfiles[me].Chemistry],
-    ["Maths", sortedProfiles[me].Maths],];
-  const sortedSubj = subjectSort.sort((a, b) => {
-    return -1* (b[1] - a[1]);
-  }).slice(0, 2);
+    ["Maths", sortedProfiles[me].Maths],
+  ];
+  const sortedSubj = subjectSort
+    .sort((a, b) => {
+      return -1 * (b[1] - a[1]);
+    })
+    .slice(0, 2);
   return (
     <main>
       <Header />
@@ -114,7 +120,8 @@ function Mainpage() {
                 Total students appeared in Test: {sortedProfiles.length}
               </div>
               <div id="percentile">
-                <b>Percentile:</b> {(sortedProfiles[me].total*100/45).toFixed(2)}{" "}
+                <b>Percentile:</b>{" "}
+                {((sortedProfiles[me].total * 100) / 45).toFixed(2)}{" "}
               </div>
               <div id="marks">
                 <b>Marks:</b> {sortedProfiles[me].total}
@@ -149,7 +156,6 @@ function Mainpage() {
               <div id="subject-3">
                 <b>Maths:</b> {sortedProfiles[me].Maths}
               </div>
-
             </div>
           </div>
         </div>
@@ -194,8 +200,12 @@ function Mainpage() {
                 <b>Subjects to be improved upon</b>
               </div>
               {sortedSubj.map((sub, index) => {
-                    return <div id="subject-1" key={sub[0]}>{sub[0]}</div>
-                  })}
+                return (
+                  <div id="subject-1" key={sub[0]}>
+                    {sub[0]}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -232,11 +242,13 @@ function Mainpage() {
       </div>
       <div className="flex">
         <div className="m-auto mt-16">
-                    <BarGraph
-                p={sortedProfiles[me].Physics}
-                c={sortedProfiles[me].Chemistry}
-                m={sortedProfiles[me].Maths}
-                /></div></div>
+          <BarGraph
+            p={sortedProfiles[me].Physics}
+            c={sortedProfiles[me].Chemistry}
+            m={sortedProfiles[me].Maths}
+          />
+        </div>
+      </div>
     </main>
   );
 }

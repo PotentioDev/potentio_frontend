@@ -5,9 +5,10 @@ function Leaderboard() {
   const [data, setData] = useState({
     profiles: [],
   });
-useEffect(() => {
-    axios.get("https://potentio-backend.herokuapp.com/api/results/get").then(
-      (res) => {
+  useEffect(() => {
+    axios
+      .get("https://potentio-backend.herokuapp.com/api/results/get")
+      .then((res) => {
         const toFill = [];
         res.data.forEach((profile) => {
           toFill.push({
@@ -15,20 +16,23 @@ useEffect(() => {
             Physics: profile.physics_marks,
             Chemistry: profile.chemistry_marks,
             Maths: profile.maths_marks,
-            total: profile.maths_marks + profile.chemistry_marks + profile.physics_marks,
+            total:
+              profile.maths_marks +
+              profile.chemistry_marks +
+              profile.physics_marks,
           });
         });
-            if (localStorage.getItem("result")) {
-      let result = JSON.parse(localStorage.getItem("result"));
-      result["user"] = true;
-      setData({
-        ...data,
-        profiles: [...data.profiles, ...toFill, result],
+        if (localStorage?.getItem("result")) {
+          let result = JSON.parse(localStorage?.getItem("result"));
+          result["user"] = true;
+          setData({
+            ...data,
+            profiles: [...data.profiles, ...toFill, result],
+          });
+        } else {
+          setData({ profiles: [...data.profiles, ...toFill] });
+        }
       });
-    } else {
-        setData({profiles: [...data.profiles, ...toFill]});
-      }}
-    )
   }, []);
   console.log(data);
 
@@ -97,8 +101,7 @@ useEffect(() => {
     return leaderboard;
   }
 
-  if (sortedProfiles.length === 0)
-    return <div>Loading...</div>
+  if (sortedProfiles.length === 0) return <div>Loading...</div>;
   return (
     <main>
       <Header />

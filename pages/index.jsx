@@ -2,14 +2,21 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from "react";
+import axios from "axios";
 import Header from "../components/Header";
 import Laptop1 from "../public/assets/svg/laptop1.svg";
 import Symbols from "../public/assets/svg/symbols.svg";
+const { uniqueNamesGenerator, names } = require("unique-names-generator");
+
 export default function LandingPage() {
   useEffect(() => {
-    localStorage.clear();
+    // make an axios post call
+    // set headers inaxios post call
+    const shortName = uniqueNamesGenerator({
+      dictionaries: [names],
+    });
+    localStorage?.setItem("name", shortName);
   }, []);
-
   return (
     <lol>
       <Header />

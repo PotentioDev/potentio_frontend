@@ -53,22 +53,25 @@ export default function MainTestingZone() {
     const c_score = Math.round(score / 3);
     const m_score = score - p_score - c_score;
     const profile = {
-      name: "Mohit Gupta",
+      name: localStorage?.getItem("name")
+        ? localStorage?.getItem("name")
+        : "Radhika",
       total: score.toFixed(0),
       Physics: p_score.toFixed(0),
       Maths: m_score.toFixed(0),
       Chemistry: c_score.toFixed(0),
     };
-    localStorage.setItem("result", JSON.stringify(profile));
-    axios.post("https://potentio-backend.herokuapp.com/api/results/post", {
-      "name": profile.name,
-      "physics_marks": profile.Physics,
-      "maths_marks": profile.Maths,
-      "chemistry_marks": profile.Chemistry,
-    }).then(() => {
-    //  window.location.href = "/result"
-    });
-
+    localStorage?.setItem("result", JSON.stringify(profile));
+    axios
+      .post("https://potentio-backend.herokuapp.com/api/results/post", {
+        name: profile.name,
+        physics_marks: profile.Physics,
+        maths_marks: profile.Maths,
+        chemistry_marks: profile.Chemistry,
+      })
+      .then(() => {
+        //  window.location.href = "/result"
+      });
   }
 
   const {
@@ -101,19 +104,18 @@ export default function MainTestingZone() {
   }
 
   useEffect(() => {
-    axios.get("https://potentio-backend.herokuapp.com/api/questions/getall").then(
-      (res) => {
+    axios
+      .get("https://potentio-backend.herokuapp.com/api/questions/getall")
+      .then((res) => {
         setData({
           ...data,
           questions: res.data.sort(() => 0.5 - Math.random()).slice(0, 15),
         });
-      }
-    );
+      });
     const time = new Date();
     time.setSeconds(time.getSeconds() + 600);
     restart(time);
   }, []);
-
 
   function generate_question_boxes() {
     const questions = [];
@@ -231,8 +233,7 @@ export default function MainTestingZone() {
     });
   }
 
-  if (data.questions.length === 0)
-    return <div> Loading... </div>
+  if (data.questions.length === 0) return <div> Loading... </div>;
 
   return (
     <main>
