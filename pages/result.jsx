@@ -39,6 +39,13 @@ function Mainpage() {
   console.log(data);
   if (me===null)
     return <div>Loading...</div>
+
+  const subjectSort = [["Physics", sortedProfiles[me].Physics],
+    ["Chemistry", sortedProfiles[me].Chemistry],
+    ["Maths", sortedProfiles[me].Maths],];
+  const sortedSubj = subjectSort.sort((a, b) => {
+    return -1* (b[1] - a[1]);
+  }).slice(0, 2);
   return (
     <main>
       <Header />
@@ -88,7 +95,7 @@ function Mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-teal-500 to-emerald-500 shadow-xl"
             >
               <div id="student-data" className="h-16">
-                Total students appeared in Test - xyz{" "}
+                Total students appeared in Test: {sortedProfiles.length}
               </div>
               <div id="percentile">
                 <b>Percentile:</b> {(sortedProfiles[me].total*100/45).toFixed(2)}{" "}
@@ -167,11 +174,11 @@ function Mainpage() {
                 id="subs-heading"
                 className="h-16 text-xl pl-6 pr-6 font-extrabold"
               >
-                <b>Top Weak Subjects</b>
+                <b>Subjects to be improved upon</b>
               </div>
-              <div id="subject-1">Maths</div>
-              <div id="subject-2">Physics</div>
-              <div id="subject-3">Chemistry</div>
+              {sortedSubj.map((sub, index) => {
+                    return <div id="subject-1" key={sub[0]}>{sub[0]}</div>
+                  })}
             </div>
           </div>
         </div>
