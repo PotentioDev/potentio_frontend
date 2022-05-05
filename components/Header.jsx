@@ -61,32 +61,9 @@ export default function Header() {
             Mohit Gupta
           </p>
         </div>
-        <div id="proficiency">
-          <svg className="w-20 h-20">
-            <circle
-              className="text-gray-300"
-              strokeWidth="5"
-              stroke="currentColor"
-              fill="transparent"
-              r="20"
-              cx="40"
-              cy="40"
-            />
-            <circle
-              className="text-sky-500"
-              strokeWidth="5"
-              strokeDasharray="circumference"
-              strokeDashoffset="circumference - percent / 100 * circumference"
-              strokeLinecap="round"
-              stroke="currentColor"
-              fill="transparent"
-              r="20"
-              cx="40"
-              cy="40"
-            />
-          </svg>
+        <div id="proficiency" className="pt-4 pl-1">
+          <img src="https://i.imgur.com/h1hYiam.png" className="h-10 inline-block align-middle" style={{borderRadius: "2rem", "borderColor": "skyblue", "borderWidth": "5px"}}/>
 
-          <span className=" text-lg text-blue-700" x-text="50"></span>
         </div>
       </div>
     </nav>
