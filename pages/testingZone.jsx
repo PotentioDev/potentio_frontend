@@ -1,12 +1,12 @@
+import axios from "axios";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useTimer } from "react-timer-hook";
-import { All_Questions } from "../data";
 
 export default function MainTestingZone() {
   const [data, setData] = useState({
     currentQuestion: 0,
-    questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 15),
+    questions: [],
     filled_responses: Array(15).fill(-1),
     marked_for_review: Array(15).fill(false),
     visited_questions: Array(15).fill(false),
@@ -44,7 +44,7 @@ export default function MainTestingZone() {
         data.questions[i].Answer,
         " is herer"
       );
-      if (data.filled_responses[i] === 1) {
+      if (data.filled_responses[i] === data.questions[i].Answer) {
         score += 5;
       }
     }
@@ -60,7 +60,15 @@ export default function MainTestingZone() {
       Chemistry: c_score.toFixed(0),
     };
     localStorage.setItem("result", JSON.stringify(profile));
-    // window.location.href = "/result";
+    axios.post("https://potentio-backend.herokuapp.com/api/results/post", {
+      "name": profile.name,
+      "physics_marks": profile.Physics,
+      "maths_marks": profile.Maths,
+      "chemistry_marks": profile.Chemistry,
+    }).then(() => {
+    //  window.location.href = "/result"
+    });
+
   }
 
   const {
@@ -93,10 +101,19 @@ export default function MainTestingZone() {
   }
 
   useEffect(() => {
+    axios.get("https://potentio-backend.herokuapp.com/api/questions/getall").then(
+      (res) => {
+        setData({
+          ...data,
+          questions: res.data.sort(() => 0.5 - Math.random()).slice(0, 15),
+        });
+      }
+    );
     const time = new Date();
     time.setSeconds(time.getSeconds() + 600);
     restart(time);
   }, []);
+
 
   function generate_question_boxes() {
     const questions = [];
@@ -213,6 +230,9 @@ export default function MainTestingZone() {
       }),
     });
   }
+
+  if (data.questions.length === 0)
+    return <div> Loading... </div>
 
   return (
     <main>

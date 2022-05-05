@@ -1,19 +1,35 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { Profiles } from "../data";
 function Leaderboard() {
   const [data, setData] = useState({
-    profiles: Profiles,
+    profiles: [],
   });
-  useEffect(() => {
-    if (localStorage.getItem("result")) {
+useEffect(() => {
+    axios.get("https://potentio-backend.herokuapp.com/api/results/get").then(
+      (res) => {
+        const toFill = [];
+        res.data.forEach((profile) => {
+          toFill.push({
+            name: profile.name,
+            Physics: profile.physics_marks,
+            Chemistry: profile.chemistry_marks,
+            Maths: profile.maths_marks,
+            total: profile.maths_marks + profile.chemistry_marks + profile.physics_marks,
+          });
+        });
+            if (localStorage.getItem("result")) {
       let result = JSON.parse(localStorage.getItem("result"));
       result["user"] = true;
       setData({
         ...data,
-        profiles: [...data.profiles, result],
+        profiles: [...data.profiles, ...toFill, result],
       });
-    }
+    } else {
+        setData({profiles: [...data.profiles, ...toFill]});
+      }}
+    )
   }, []);
   console.log(data);
 
@@ -81,6 +97,9 @@ function Leaderboard() {
 
     return leaderboard;
   }
+
+  if (sortedProfiles.length === 0)
+    return <div>Loading...</div>
   return (
     <main>
       <Header />
