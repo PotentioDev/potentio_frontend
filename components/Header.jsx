@@ -17,12 +17,11 @@ export default function Header() {
         </div>
       </Link>
       <ul id="Otions" className="flex space-x-10 list-none px-8">
-        {[
-          ["Compete", "competeZone"],
-          ["Dashboard", ""],
-        ].map(([title, link]) => (
+        {[["Compete", "competeZone"]].map(([title, link]) => (
           <Link href={link} passHref>
-            <li className="font-nunito text-xs cursor-pointer">{title}</li>
+            <li className="font-nunito   cursor-pointer">
+              <h1>{title}</h1>
+            </li>
           </Link>
         ))}
         {/* <li className="">Compete</li>

@@ -13,7 +13,7 @@ export default function Header() {
         Potentio
       </div>
       <ul id="Otions" className="flex space-x-12 list-none mx-4">
-        {[["Compete"], ["Dashboard"]].map(([title]) => (
+        {[["Compete"]].map(([title]) => (
           // eslint-disable-next-line react/jsx-key
           <li className="font-nunito text-xs">{title}</li>
         ))}
