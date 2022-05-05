@@ -1,16 +1,44 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import Header from "../components/Header";
+import {Profiles} from "../data";
 
 function Mainpage() {
-  const [data, setData] = React.useState(null);
-
+  const [data, setData] = useState({
+    profiles: Profiles,
+  });
   useEffect(() => {
-    console.log(JSON.parse(localStorage.getItem("result")));
-    setData(JSON.parse(localStorage.getItem("result")));
+    if (localStorage.getItem("result")) {
+      let result = JSON.parse(localStorage.getItem("result"));
+      result["user"] = true;
+      setData({
+        ...data,
+        profiles: [...data.profiles, result],
+      });
+    }
   }, []);
+  console.log(data);
+
+  // Sort profiles by score
+  let sortedProfiles = [];
+  if (data.profiles !== undefined) {
+    sortedProfiles = data.profiles.sort((a, b) => {
+      return b.total - a.total;
+    });
+  }
+  let me = null;
+  for (let i = 0; i < sortedProfiles.length; i++)
+    if (sortedProfiles[i].user) me = i;
+
+
+  // useEffect(() => {
+  //   console.log(JSON.parse(localStorage.getItem("result")));
+  //   setData(JSON.parse(localStorage.getItem("result")));
+  // }, []);
 
   console.log(data);
+  if (me===null)
+    return <div>Loading...</div>
   return (
     <main>
       <Header />
@@ -63,13 +91,13 @@ function Mainpage() {
                 Total students appeared in Test - xyz{" "}
               </div>
               <div id="percentile">
-                <b>Percentile:</b> 0000{" "}
+                <b>Percentile:</b> {(sortedProfiles[me].total*100/45).toFixed(2)}{" "}
               </div>
               <div id="marks">
-                <b>Marks:</b> {data?.total}
+                <b>Marks:</b> {sortedProfiles[me].total}
               </div>
               <div id="rank">
-                <b>Rank:</b> 0000
+                <b>Rank:</b> {me + 1}
               </div>
             </div>
           </div>
@@ -89,14 +117,14 @@ function Mainpage() {
                 <b>Marks</b>
               </div>
               <div id="subject-1">
-                <b>Physics:</b> {data?.Physics}
+                <b>Physics:</b> {sortedProfiles[me].Physics}
               </div>
               <div id="subject-2">
                 <b>Chemistry:</b>
-                {data?.Chemistry}
+                {sortedProfiles[me].Chemistry}
               </div>
               <div id="subject-3">
-                <b>Maths:</b> {data?.Maths}
+                <b>Maths:</b> {sortedProfiles[me].Maths}
               </div>
             </div>
           </div>

@@ -6,10 +6,10 @@ import { All_Questions } from "../data";
 export default function MainTestingZone() {
   const [data, setData] = useState({
     currentQuestion: 0,
-    questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 10),
-    filled_responses: Array(10).fill(-1),
-    marked_for_review: Array(10).fill(false),
-    visited_questions: Array(10).fill(false),
+    questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 15),
+    filled_responses: Array(15).fill(-1),
+    marked_for_review: Array(15).fill(false),
+    visited_questions: Array(15).fill(false),
     radio_buttons: -1,
   });
   const time = new Date();
@@ -35,7 +35,7 @@ export default function MainTestingZone() {
         }
         return value;
       }),
-      radio_buttons: data.filled_responses[(data.currentQuestion + 1) % 10],
+      radio_buttons: data.filled_responses[(data.currentQuestion + 1) % 15],
     });
     let score = 0;
     for (let i = 0; i < data.questions.length; i++) {
@@ -54,10 +54,10 @@ export default function MainTestingZone() {
     const m_score = score - p_score - c_score;
     const profile = {
       name: "Geetansh Mishra",
-      total: score,
-      Physics: p_score,
-      Maths: m_score,
-      Chemistry: c_score,
+      total: score.toFixed(2),
+      Physics: p_score.toFixed(2),
+      Maths: m_score.toFixed(2),
+      Chemistry: c_score.toFixed(2),
     };
     localStorage.setItem("result", JSON.stringify(profile));
     // window.location.href = "/result";
@@ -78,8 +78,8 @@ export default function MainTestingZone() {
   function next() {
     setData({
       ...data,
-      currentQuestion: (data.currentQuestion + 1) % 10,
-      radio_buttons: data.filled_responses[(data.currentQuestion + 1) % 10],
+      currentQuestion: (data.currentQuestion + 1) % 15,
+      radio_buttons: data.filled_responses[(data.currentQuestion + 1) % 15],
     });
   }
   console.log(data);
@@ -87,8 +87,8 @@ export default function MainTestingZone() {
   function back() {
     setData({
       ...data,
-      currentQuestion: (data.currentQuestion - 1) % 10,
-      radio_buttons: data.filled_responses[(data.currentQuestion - 1) % 10],
+      currentQuestion: (data.currentQuestion - 1) % 15,
+      radio_buttons: data.filled_responses[(data.currentQuestion - 1) % 15],
     });
   }
 
@@ -100,13 +100,13 @@ export default function MainTestingZone() {
 
   function generate_question_boxes() {
     const questions = [];
-    for (let i = 0; i <= 9; i++) {
+    for (let i = 0; i < 15; i++) {
       questions.push(
         <button
           onClick={() => {
             setData({ ...data, currentQuestion: i });
           }}
-          className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-100 transition duration-150 ease-in-out"
+          className=" h-12 w-12 shadow-md shad shadow-gray-200 rounded-lg hover:shadow-md hover:shadow-gray-400 focus:ring-2 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-gray-150 transition duration-150 ease-in-out"
           style={{
             "background-color":
               data.visited_questions[i] === false
@@ -195,8 +195,8 @@ export default function MainTestingZone() {
         }
         return value;
       }),
-      radio_buttons: data.filled_responses[(data.currentQuestion + 1) % 10],
-      currentQuestion: (data.currentQuestion + 1) % 10,
+      radio_buttons: data.filled_responses[(data.currentQuestion + 1) % 15],
+      currentQuestion: (data.currentQuestion + 1) % 15,
     });
   }
   console.log(data.radio_buttons);
@@ -232,10 +232,10 @@ export default function MainTestingZone() {
               <p className="pt-8">Question {data.currentQuestion + 1}</p>
             </header>
 
-            <div id="question" className="w-auto h-64">
+            <div id="question" className="w-auto">
               {data.questions[data.currentQuestion].Question_Text}
               {data.questions[data.currentQuestion].Image ? (
-                <img src={data.questions[data.currentQuestion].Image} />
+                <img src={data.questions[data.currentQuestion].Image}/>
               ) : (
                 ""
               )}

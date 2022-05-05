@@ -71,7 +71,7 @@ function Leaderboard() {
             <div className="flex-col text-white pl-12 pr-12 font-nunito">
               <p className=" text-sm flex">Percentile: </p>{" "}
               <p className="flex text-base font-semibold tracking-wider">
-                {parseInt((sortedProfiles[i].total * 100) / 45)}
+                {((sortedProfiles[i].total * 100) / 45).toFixed(2)}
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ function Leaderboard() {
               <div className="flex-col text-white pl-12 pr-12 font-nunito">
                 <p className=" text-sm flex">Percentile: </p>{" "}
                 <p className="flex text-base font-semibold tracking-wider">
-                  {(sortedProfiles[me].total * 100) / 45}
+                  {((sortedProfiles[me].total * 100) / 45).toFixed(2)}
                 </p>
               </div>
             </div>
