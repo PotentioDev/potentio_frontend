@@ -8,7 +8,7 @@ export default function Header() {
       id="navigation-bar"
       className="flex mt-10 mx-12 w-11/12 h-16 shadow-2xl rounded-full justify-center items-center select-none"
     >
-      <Link href="compete-zone" passHref>
+      <Link href="/" passHref>
         <div
           id="Potentio-logo"
           className="flex cursor-pointer font-comfortaa bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl px-8"
