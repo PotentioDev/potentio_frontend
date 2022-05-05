@@ -319,7 +319,7 @@ export const All_Questions = Chemistry_Question.concat(
 
 
 
-const Profiles = [
+export const Profiles = [
   {
     name: "Heemank Verma",
     total: 45,
