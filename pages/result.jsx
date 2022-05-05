@@ -152,7 +152,7 @@ function Mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-sky-600 to-sky-400 drop-shadow"
             >
               <div id="marks" className="pb-2">
-                Marks {data?.total}
+                Marks {sortedProfiles[me].total}
               </div>
               <div
                 id="line"
