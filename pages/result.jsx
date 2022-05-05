@@ -152,14 +152,14 @@ function Mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-sky-600 to-sky-400 drop-shadow"
             >
               <div id="marks" className="pb-2">
-                Marks {sortedProfiles[me].total}
+                Marks: {sortedProfiles[me].total}
               </div>
               <div
                 id="line"
                 className="border-t-4 border-white border-solid w-2/6 ml-24 pb-2 rounded-t-md rounded-b-3xl"
               ></div>
               <div id="total">
-                <b>Total 45</b>
+                <b>Total: 45</b>
               </div>
             </div>
           </div>
