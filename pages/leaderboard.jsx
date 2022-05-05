@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import { Profiles } from "../data";
 function Leaderboard() {
   const [data, setData] = useState({
     profiles: [],
