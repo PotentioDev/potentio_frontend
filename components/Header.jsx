@@ -6,9 +6,9 @@ export default function Header() {
   return (
     <nav
       id="navigation-bar"
-      className="flex mt-10 mx-12 w-11/12 h-16 shadow-2xl rounded-full justify-center items-center select-none"
+      className="flex mt-10 mx-12 w-11/12 h-16 shadow-2xl rounded-full justify-center items-center select-none justify-around"
     >
-      <Link href="compete-zone" passHref>
+      <Link href="/" passHref>
         <div
           id="Potentio-logo"
           className="flex cursor-pointer font-comfortaa bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text text-2xl px-8"
@@ -17,17 +17,22 @@ export default function Header() {
         </div>
       </Link>
       <ul id="Otions" className="flex space-x-10 list-none px-8">
-        {[["Compete", "compete-zone"], ["Membership", ""], ["Gym", ""], ["Dashboard", ""]].map(
-          ([title, link]) => (
-            <Link href={link} passHref><li className="font-nunito text-xs cursor-pointer">{title}</li></Link>
-          )
-        )}
+        {[
+          ["Compete", "competeZone"],
+          ["LeaderBoard", "leaderboard"],
+        ].map(([title, link]) => (
+          <Link href={link} passHref>
+            <li className="font-nunito   cursor-pointer">
+              <h1>{title}</h1>
+            </li>
+          </Link>
+        ))}
         {/* <li className="">Compete</li>
         <li >Membership</li>
         <li>Gym</li>
         <li>Dashboard</li> */}
       </ul>
-      <div id="search-bar" className="flex px-8">
+      {/* <div id="search-bar" className="flex px-8">
         <input
           type="search"
           className="flex pl-5 pr-4 mr-1 rounded-l-full w-80 placeholder-cyan-500 text-xs text shadow-md hover:shadow-lg focus:outline-none focus:shadow-inner focus:ring-0  active:shadow-lg transition duration-150 ease-in-out"
@@ -46,7 +51,7 @@ export default function Header() {
             />
           </svg>
         </div>
-      </div>
+      </div> */}
       <div id="personal-info" className="flex text-nunito text-right">
         <div className="mt-5">
           <p id="city-tier-info" className="text-xs text-slate-500">

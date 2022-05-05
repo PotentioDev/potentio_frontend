@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         comfortaa: "'Comfortaa', cursive",
         nunito: "'Nunito Sans', sans-serif",
+        nunitoEB: "'Nunito','sans-serif'"
       }
     },
   },

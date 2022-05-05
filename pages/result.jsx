@@ -1,8 +1,44 @@
 import Link from "next/link";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Header from "../components/Header";
+import {Profiles} from "../data";
 
-function mainpage() {
+function Mainpage() {
+  const [data, setData] = useState({
+    profiles: Profiles,
+  });
+  useEffect(() => {
+    if (localStorage.getItem("result")) {
+      let result = JSON.parse(localStorage.getItem("result"));
+      result["user"] = true;
+      setData({
+        ...data,
+        profiles: [...data.profiles, result],
+      });
+    }
+  }, []);
+  console.log(data);
+
+  // Sort profiles by score
+  let sortedProfiles = [];
+  if (data.profiles !== undefined) {
+    sortedProfiles = data.profiles.sort((a, b) => {
+      return b.total - a.total;
+    });
+  }
+  let me = null;
+  for (let i = 0; i < sortedProfiles.length; i++)
+    if (sortedProfiles[i].user) me = i;
+
+
+  // useEffect(() => {
+  //   console.log(JSON.parse(localStorage.getItem("result")));
+  //   setData(JSON.parse(localStorage.getItem("result")));
+  // }, []);
+
+  console.log(data);
+  if (me===null)
+    return <div>Loading...</div>
   return (
     <main>
       <Header />
@@ -11,7 +47,7 @@ function mainpage() {
           id="nav-buttons"
           className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   select-none"
         >
-          <Link href="/compete-zone" passHref>
+          <Link href="/" passHref>
             <div
               id="back-to-home"
               className="bg-gradient-to-r from-purple-500 to-purple-800 hover:from-purple-500 hover:to-purple-500 active:from-purple-500 active:to-purple-800 w-1/3 h-12 ml-16 mr-16 rounded-2xl cursor-pointer pt-1.5 pb-2 pl-1.5 pr-1.5 text-center text-base tracking-wide inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 hover:bg-red-800 active focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-violet-400 transition duration-180 ease-in-out "
@@ -19,7 +55,7 @@ function mainpage() {
             >
               <p
                 className="font-sans font-bold text-white inline-block"
-                href="/compete-zone"
+                href="/competeZone"
               >
                 Back to Home
               </p>
@@ -55,10 +91,13 @@ function mainpage() {
                 Total students appeared in Test - xyz{" "}
               </div>
               <div id="percentile">
-                <b>Percentile:</b> 0000{" "}
+                <b>Percentile:</b> {(sortedProfiles[me].total*100/45).toFixed(2)}{" "}
+              </div>
+              <div id="marks">
+                <b>Marks:</b> {sortedProfiles[me].total}
               </div>
               <div id="rank">
-                <b>Rank:</b> 0000
+                <b>Rank:</b> {me + 1}
               </div>
             </div>
           </div>
@@ -78,13 +117,14 @@ function mainpage() {
                 <b>Marks</b>
               </div>
               <div id="subject-1">
-                <b>Subject 1:</b> 000{" "}
+                <b>Physics:</b> {sortedProfiles[me].Physics}
               </div>
               <div id="subject-2">
-                <b>Subject 2:</b> 000
+                <b>Chemistry:</b>
+                {sortedProfiles[me].Chemistry}
               </div>
               <div id="subject-3">
-                <b>Subject 3:</b> 000
+                <b>Maths:</b> {sortedProfiles[me].Maths}
               </div>
             </div>
           </div>
@@ -103,14 +143,14 @@ function mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-sky-600 to-sky-400 drop-shadow"
             >
               <div id="marks" className="pb-2">
-                Marks{" "}
+                Marks {data?.total}
               </div>
               <div
                 id="line"
                 className="border-t-4 border-white border-solid w-2/6 ml-20 pb-2 rounded-t-md rounded-b-3xl"
               ></div>
               <div id="total">
-                <b>Total</b>
+                <b>Total 45</b>
               </div>
             </div>
           </div>
@@ -129,14 +169,14 @@ function mainpage() {
               >
                 <b>Top Weak Subjects</b>
               </div>
-              <div id="subject-1">Subject 1</div>
-              <div id="subject-2">Subject 2</div>
-              <div id="subject-3">Subject 3</div>
+              <div id="subject-1">Maths</div>
+              <div id="subject-2">Physics</div>
+              <div id="subject-3">Chemistry</div>
             </div>
           </div>
         </div>
 
-        <div
+        {/* <div
           id="graph-analysis-points"
           className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   "
         >
@@ -149,25 +189,25 @@ function mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600  drop-shadow"
             ></div>
           </div>
-        </div>
+        </div> */}
 
-        <div
-          id="graph-analysis-bar"
-          className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   "
-        >
-          <div
-            id="graph-container2"
-            className="flex justify-center w-full ml-3 mr-6 rounded-2xl items-center pt-4 pb-4 h-full  bg-gradient-to-r from-fuchsia-600 to-fuchsia-400"
+        {/* <div
+            id="graph-analysis-bar"
+            className="flex w-7/12 pt-3 pb-3 pl-12 pr-12 h-1/4 justify-between items-center   "
           >
             <div
-              id="graph-bar"
-              className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600   drop-shadow"
-            ></div>
-          </div>
-        </div>
+              id="graph-container2"
+              className="flex justify-center w-full ml-3 mr-6 rounded-2xl items-center pt-4 pb-4 h-full  bg-gradient-to-r from-fuchsia-600 to-fuchsia-400"
+            >
+              <div
+                id="graph-bar"
+                className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 justify-center text-center text-white bg-gradient-to-r from-violet-800 to-violet-600   drop-shadow"
+              ></div>
+            </div>
+          </div> */}
       </div>
     </main>
   );
 }
 
-export default mainpage;
+export default Mainpage;
