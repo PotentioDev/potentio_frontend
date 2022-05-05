@@ -16,6 +16,7 @@ export default function LandingPage() {
       dictionaries: [names],
     });
     localStorage?.setItem("name", shortName);
+    axios.get("https://potentio-backend.herokuapp.com/" );
   }, []);
   return (
     <lol>
