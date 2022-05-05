@@ -15,6 +15,7 @@ function Leaderboard() {
       });
     }
   }, [])
+  console.log(data)
 
   // Sort profiles by score
   const sortedProfiles = data.profiles.sort((a, b) => {
