@@ -19,7 +19,6 @@ export default function Header() {
       <ul id="Otions" className="flex space-x-10 list-none px-8">
         {[
           ["Compete", "competeZone"],
-          ["LeaderBoard", "leaderboard"],
         ].map(([title, link]) => (
           <Link href={link} passHref>
             <li className="font-nunito   cursor-pointer">
