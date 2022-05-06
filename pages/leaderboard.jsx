@@ -24,14 +24,15 @@ function Leaderboard() {
         });
         if (localStorage?.getItem("result")) {
           let result = JSON.parse(localStorage?.getItem("result"));
-          result["user"] = true;
-          setData({
-            ...data,
-            profiles: [...data.profiles, ...toFill, result],
-          });
-        } else {
-          setData({ profiles: [...data.profiles, ...toFill] });
+          for (let i = 0; i < toFill.length; i++) {
+            if (toFill[i].name === result.name && toFill[i].total === result.total) {
+              toFill[i].user = true;
+              break;
+            }
+          }
         }
+          setData({ profiles: [...data.profiles, ...toFill] });
+
       });
   }, []);
   console.log(data);
