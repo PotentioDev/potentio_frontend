@@ -1,12 +1,12 @@
+import axios from "axios";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useTimer } from "react-timer-hook";
-import { All_Questions } from "../data";
 
 export default function MainTestingZone() {
   const [data, setData] = useState({
     currentQuestion: 0,
-    questions: All_Questions.sort(() => 0.5 - Math.random()).slice(0, 15),
+    questions: [],
     filled_responses: Array(15).fill(-1),
     marked_for_review: Array(15).fill(false),
     visited_questions: Array(15).fill(false),
@@ -49,18 +49,29 @@ export default function MainTestingZone() {
       }
     }
 
-    const p_score = score / 2;
-    const c_score = score / 3;
+    const p_score = Math.round(score / 2);
+    const c_score = Math.round(score / 3);
     const m_score = score - p_score - c_score;
     const profile = {
-      name: "Mohit Gupta",
-      total: score.toFixed(2),
-      Physics: p_score.toFixed(2),
-      Maths: m_score.toFixed(2),
-      Chemistry: c_score.toFixed(2),
+      name: localStorage?.getItem("name")
+        ? localStorage?.getItem("name")
+        : "Radhika",
+      total: score.toFixed(0),
+      Physics: p_score.toFixed(0),
+      Maths: m_score.toFixed(0),
+      Chemistry: c_score.toFixed(0),
     };
-    localStorage.setItem("result", JSON.stringify(profile));
-    // window.location.href = "/result";
+    localStorage?.setItem("result", JSON.stringify(profile));
+    axios
+      .post("https://potentio-backend.herokuapp.com/api/results/post", {
+        name: profile.name,
+        physics_marks: profile.Physics,
+        maths_marks: profile.Maths,
+        chemistry_marks: profile.Chemistry,
+      })
+      .then(() => {
+        //  window.location.href = "/result"
+      });
   }
 
   const {
@@ -93,6 +104,14 @@ export default function MainTestingZone() {
   }
 
   useEffect(() => {
+    axios
+      .get("https://potentio-backend.herokuapp.com/api/questions/getall")
+      .then((res) => {
+        setData({
+          ...data,
+          questions: res.data.sort(() => 0.5 - Math.random()).slice(0, 15),
+        });
+      });
     const time = new Date();
     time.setSeconds(time.getSeconds() + 600);
     restart(time);
@@ -213,6 +232,8 @@ export default function MainTestingZone() {
       }),
     });
   }
+
+  if (data.questions.length === 0) return <div> Loading... </div>;
 
   return (
     <main>
@@ -582,30 +603,7 @@ export default function MainTestingZone() {
 
             <div id="done-review" className="flex h-20 w-44">
               <div id="done-review-icon" className="flex h-16 w-20 drop-shadow">
-      <svg width="83" height="82" viewBox="0 0 83 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_dd_1244_2272)">
-<rect x="11.7988" y="11" width="52" height="52" rx="26" fill="#F5F5F5"/>
-</g>
-<path d="M35.482 42C35.002 42 34.762 41.7653 34.762 41.296C34.762 40.8373 35.002 40.608 35.482 40.608H37.434V32.624L35.93 33.584C35.7273 33.712 35.5353 33.7493 35.354 33.696C35.1833 33.632 35.05 33.52 34.954 33.36C34.8686 33.2 34.842 33.0293 34.874 32.848C34.9166 32.656 35.0393 32.496 35.242 32.368L37.45 30.976C37.6313 30.8693 37.802 30.784 37.962 30.72C38.1326 30.6453 38.2926 30.608 38.442 30.608C38.6233 30.608 38.7726 30.6613 38.89 30.768C39.018 30.8747 39.082 31.04 39.082 31.264V40.608H40.874C41.3646 40.608 41.61 40.8373 41.61 41.296C41.61 41.7653 41.3646 42 40.874 42H35.482Z" fill="black"/>
-<defs>
-<filter id="filter0_dd_1244_2272" x="0.798828" y="0" width="82" height="82" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="4" dy="4"/>
-<feGaussianBlur stdDeviation="7.5"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0 0.858507 0 0 0 0.35 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1244_2272"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dx="2" dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0 0.925174 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="effect1_dropShadow_1244_2272" result="effect2_dropShadow_1244_2272"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1244_2272" result="shape"/>
-</filter>
-</defs>
-</svg>
+                <img src="white.svg" />
               </div>
               <p className="flex flex-wrap w-40 font-nunito font-semibold pt-5 -ml-3">
                 Done and Marked for Review

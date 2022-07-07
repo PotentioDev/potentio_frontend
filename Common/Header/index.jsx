@@ -48,7 +48,9 @@ export default function Header() {
             TIER S
           </p>
           <p id="name" className="text-cyan-500">
-            Mohit Gupta
+            {localStorage?.getItem("name")
+              ? localStorage?.getItem("name")
+              : "Radhika"}
           </p>
         </div>
         <div id="proficiency">

@@ -1,21 +1,41 @@
+import axios from "axios";
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
+import BarGraph from "../components/BarGraph";
 import Header from "../components/Header";
-import {Profiles} from "../data";
 
 function Mainpage() {
   const [data, setData] = useState({
-    profiles: Profiles,
+    profiles: [],
   });
   useEffect(() => {
-    if (localStorage.getItem("result")) {
-      let result = JSON.parse(localStorage.getItem("result"));
-      result["user"] = true;
-      setData({
-        ...data,
-        profiles: [...data.profiles, result],
+    axios
+      .get("https://potentio-backend.herokuapp.com/api/results/get")
+      .then((res) => {
+        const toFill = [];
+        res.data.forEach((profile) => {
+          toFill.push({
+            name: profile.name,
+            Physics: profile.physics_marks,
+            Chemistry: profile.chemistry_marks,
+            Maths: profile.maths_marks,
+            total:
+              profile.maths_marks +
+              profile.chemistry_marks +
+              profile.physics_marks,
+          });
+        });
+        if (localStorage?.getItem("result")) {
+          let result = JSON.parse(localStorage?.getItem("result"));
+          result["user"] = true;
+          setData({
+            ...data,
+            profiles: [...data.profiles, ...toFill, result],
+          });
+        } else {
+          setData({ profiles: [...data.profiles, ...toFill] });
+        }
       });
-    }
   }, []);
   console.log(data);
 
@@ -30,22 +50,24 @@ function Mainpage() {
   for (let i = 0; i < sortedProfiles.length; i++)
     if (sortedProfiles[i].user) me = i;
 
-
   // useEffect(() => {
-  //   console.log(JSON.parse(localStorage.getItem("result")));
-  //   setData(JSON.parse(localStorage.getItem("result")));
+  //   console.log(JSON.parse(localStorage?.getItem("result")));
+  //   setData(JSON.parse(localStorage?.getItem("result")));
   // }, []);
 
   console.log(data);
-  if (me===null)
-    return <div>Loading...</div>
+  if (me === null) return <div>Loading...</div>;
 
-  const subjectSort = [["Physics", sortedProfiles[me].Physics],
+  const subjectSort = [
+    ["Physics", sortedProfiles[me].Physics],
     ["Chemistry", sortedProfiles[me].Chemistry],
-    ["Maths", sortedProfiles[me].Maths],];
-  const sortedSubj = subjectSort.sort((a, b) => {
-    return -1* (b[1] - a[1]);
-  }).slice(0, 2);
+    ["Maths", sortedProfiles[me].Maths],
+  ];
+  const sortedSubj = subjectSort
+    .sort((a, b) => {
+      return -1 * (b[1] - a[1]);
+    })
+    .slice(0, 2);
   return (
     <main>
       <Header />
@@ -98,7 +120,8 @@ function Mainpage() {
                 Total students appeared in Test: {sortedProfiles.length}
               </div>
               <div id="percentile">
-                <b>Percentile:</b> {(sortedProfiles[me].total*100/45).toFixed(2)}{" "}
+                <b>Percentile:</b>{" "}
+                {((sortedProfiles[me].total * 100) / 45).toFixed(2)}{" "}
               </div>
               <div id="marks">
                 <b>Marks:</b> {sortedProfiles[me].total}
@@ -150,14 +173,14 @@ function Mainpage() {
               className="flex flex-col h-40 w-11/12 text-lg  rounded-2xl pt-3 pb-3 pl-2 pr-2 justify-center text-center font-nunito text-white bg-gradient-to-r from-sky-600 to-sky-400 drop-shadow"
             >
               <div id="marks" className="pb-2">
-                Marks {data?.total}
+                Marks: {sortedProfiles[me].total}
               </div>
               <div
                 id="line"
-                className="border-t-4 border-white border-solid w-2/6 ml-20 pb-2 rounded-t-md rounded-b-3xl"
+                className="border-t-4 border-white border-solid w-2/6 ml-24 pb-2 rounded-t-md rounded-b-3xl"
               ></div>
               <div id="total">
-                <b>Total 45</b>
+                <b>Total: 45</b>
               </div>
             </div>
           </div>
@@ -177,8 +200,12 @@ function Mainpage() {
                 <b>Subjects to be improved upon</b>
               </div>
               {sortedSubj.map((sub, index) => {
-                    return <div id="subject-1" key={sub[0]}>{sub[0]}</div>
-                  })}
+                return (
+                  <div id="subject-1" key={sub[0]}>
+                    {sub[0]}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -212,6 +239,15 @@ function Mainpage() {
               ></div>
             </div>
           </div> */}
+      </div>
+      <div className="flex">
+        <div className="m-auto mt-16">
+          <BarGraph
+            p={sortedProfiles[me].Physics}
+            c={sortedProfiles[me].Chemistry}
+            m={sortedProfiles[me].Maths}
+          />
+        </div>
       </div>
     </main>
   );
