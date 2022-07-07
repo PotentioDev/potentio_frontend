@@ -9,7 +9,7 @@ export default function Confirm() {
   const checkngo = () => {
     if (name.toLowerCase() === "yes i confirm") {
       if (confirmed) {
-        window.href = "/testingZone";
+        window.location.href = "/testingZone";
       }
     } else {
       alert("Please confirm that you are ready to go");
@@ -96,15 +96,13 @@ export default function Confirm() {
               id="Save_and_next"
               className="bg-blue-600 pt-1.5 pb-2 h-10 w-28 pl-1.5 ml-32 mb-20 pr-1.5 text-center text-base tracking-wide rounded-xl cursor-pointer inline-block leading-tight shadow-md hover:shadow-md hover:shadow-gray-400 focus:ring-4 focus:shadow-lg focus:outline-none focus:ring-blue-700 active:bg-green-700 transition duration-150 ease-in-out mx-20"
               type="button"
-              onClikc={(e) => {
+              onClick={(e) => {
                 checkngo();
               }}
             >
-              <Link href="/testingZone" passHref>
                 <p className="font-nunito font-bold text-white inline-block">
                   Start
                 </p>
-              </Link>
             </button>
           </div>
         </section>

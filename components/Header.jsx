@@ -19,7 +19,6 @@ export default function Header() {
       <ul id="Otions" className="flex space-x-10 list-none px-8">
         {[
           ["Compete", "competeZone"],
-          ["LeaderBoard", "leaderboard"],
         ].map(([title, link]) => (
           <Link href={link} passHref>
             <li className="font-nunito   cursor-pointer">
@@ -58,12 +57,21 @@ export default function Header() {
             TIER S
           </p>
           <p id="name" className="text-cyan-500 w-28">
-            Mohit Gupta
+            {typeof window !== "undefined" && localStorage?.getItem("name")
+              ? localStorage?.getItem("name")
+              : "Radhika"}
           </p>
         </div>
         <div id="proficiency" className="pt-4 pl-1">
-          <img src="https://i.imgur.com/h1hYiam.png" className="h-10 inline-block align-middle" style={{borderRadius: "2rem", "borderColor": "skyblue", "borderWidth": "5px"}}/>
-
+          <img
+            src="https://i.imgur.com/h1hYiam.png"
+            className="h-10 inline-block align-middle"
+            style={{
+              borderRadius: "2rem",
+              borderColor: "skyblue",
+              borderWidth: "5px",
+            }}
+          />
         </div>
       </div>
     </nav>

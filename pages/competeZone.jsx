@@ -7,11 +7,11 @@ export default function CompeteZone() {
       <Header />
       <div
         id="container"
-        className="flex flex-col mt-9 jutify-around w-full h-full pb-6 divide-y "
+        className="flex flex-col mt-9 jutify-around w-full h-full pb-6  "
       >
         <section
           id="top portion"
-          className="flex flex-row justify-around  h-1/3 w-full  pb-6 ml-20 "
+          className="flex justify-around  h-1/3 w-full  pb-6 ml-20 "
         >
           <div className="flex flex-wrap justify-start w-1/2 h-full py-40">
             <div className="flex ml-20 text-6xl w-3/5 font-nunitoEB text-gray-700">
@@ -42,14 +42,14 @@ export default function CompeteZone() {
         </section>
         <section
           id="bottom portion"
-          className="flex justify-center flex-row h-2/3 w-full "
+          className="flex justify-center h-2/3 w-full "
         >
           <div className="mb-9">
             <p className=" flex justify-start font-nunitoEB text-2xl text-gray-700 pl-20 pb-5">
               {" "}
               Short Test
             </p>
-            <div className="flex justify-center flex-row">
+            <div className="flex justify-center ">
               <Link href="/comingSoon">
                 <div className="mx-[3em] cardB cursor-pointer transition duration-500 hover:scale-110 relative">
                   <img
