@@ -4,6 +4,7 @@
 import Head from 'next/head';
 import React, { useEffect } from "react";
 import axios from "axios";
+import Fav from '../public/assets/favicon.ico';
 import Header from "../components/Header";
 import Laptop1 from "../public/assets/svg/laptop1.svg";
 import Symbols from "../public/assets/svg/symbols.svg";
@@ -24,7 +25,7 @@ export default function LandingPage() {
     <lol>
       <Head>
           <title>Potentio</title>
-          <link rel="icon" href="public/favicon.ico" />
+          <link rel="icon" src={Fav} />
       </Head>
       <Header />
       <div hidden="" id="desktop">
