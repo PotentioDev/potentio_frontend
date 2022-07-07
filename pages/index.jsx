@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
+import Head from 'next/head';
 import React, { useEffect } from "react";
 import axios from "axios";
 import Header from "../components/Header";
@@ -19,7 +20,12 @@ export default function LandingPage() {
     axios.get("https://potentio-backend.herokuapp.com/" );
   }, []);
   return (
+    
     <lol>
+      <Head>
+          <title>Potentio</title>
+          <link rel="icon" href="public/favicon.ico" />
+      </Head>
       <Header />
       <div hidden="" id="desktop">
         <div style={{ marginLeft: "7.5vw", marginTop: "5vh" }}>
