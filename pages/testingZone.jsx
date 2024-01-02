@@ -63,7 +63,7 @@ export default function MainTestingZone() {
     };
     localStorage?.setItem("result", JSON.stringify(profile));
     axios
-      .post("https://potentio-backend.herokuapp.com/api/results/post", {
+      .post("https://potentiobackend-production.up.railway.app/api/results/post", {
         name: profile.name,
         physics_marks: profile.Physics,
         maths_marks: profile.Maths,
@@ -105,7 +105,7 @@ export default function MainTestingZone() {
 
   useEffect(() => {
     axios
-      .get("https://potentio-backend.herokuapp.com/api/questions/getall")
+      .get("https://potentiobackend-production.up.railway.app/api/questions/getall")
       .then((res) => {
         setData({
           ...data,

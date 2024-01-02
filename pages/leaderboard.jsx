@@ -7,7 +7,7 @@ function Leaderboard() {
   });
   useEffect(() => {
     axios
-      .get("https://potentio-backend.herokuapp.com/api/results/get")
+      .get("https://potentiobackend-production.up.railway.app/api/results/get")
       .then((res) => {
         const toFill = [];
         res.data.forEach((profile) => {
